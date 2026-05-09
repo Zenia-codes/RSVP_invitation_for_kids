@@ -1,26 +1,26 @@
-# 🎉 RSVP pozvánka pro děti
+# 🎉 RSVP Invitation for Kids
 
-Interaktivní webová pozvánka vytvořená jako jednoduchá a hravá RSVP aplikace pro dětskou oslavu. Projekt umožňuje vyplnění formuláře, dynamické zobrazení obsahu a práci s interakcí v JavaScriptu.
-
----
-
-## 🧸 O projektu
-
-🚨Pozor🚨 Projekt je rozpracovaný.
-
-Aktuálně ladím design pozvánky + animace.
-
-Tento projekt vznikl jako cvičení na frontend vývoj a práci s:
-
-- formuláři a jejich validací
-- DOM manipulací v JavaScriptu
-- interaktivními prvky (tlačítka, přepínání sekcí)
-- zobrazením/skrytím obsahu bez refreshu stránky
-- jednoduchou UI logikou pro RSVP odpovědi
+An interactive web invitation created as a simple and playful RSVP application for a children’s birthday party. The project allows users to fill out a form, dynamically display content, and work with JavaScript interactions.
 
 ---
 
-## 🛠️ Použité technologie
+## 🧸 About the Project
+
+🚨Attention🚨 This project is still in progress.
+
+I am currently refining the invitation design and animations.
+
+This project was created as a frontend development exercise focused on working with:
+
+- forms and form validation
+- DOM manipulation in JavaScript
+- interactive elements (buttons, section toggles)
+- showing/hiding content without page refresh
+- simple UI logic for RSVP responses
+
+---
+
+## 🛠️ Technologies Used
 
 - HTML5
 - CSS3 / SCSS
@@ -28,21 +28,21 @@ Tento projekt vznikl jako cvičení na frontend vývoj a práci s:
 
 ---
 
-## ⚙️ Funkce aplikace
+## ⚙️ Application Features
 
-- 📝 RSVP formulář pro potvrzení účasti
-- ✔️ Validace jména a příjmení
-- 🎁 Dynamické zobrazování „dárkových tipů“
-- 🔄 Přepínání sekcí bez reloadu stránky
-- ⏱️ Automatické přehrávání tipů (slideshow)
-- ❌ Zobrazení chybových a úspěšných hlášek
-- 📱 Responsivní design pro mobil i desktop
+- 📝 RSVP form for attendance confirmation
+- ✔️ First name and last name validation
+- 🎁 Dynamic display of “gift tips”
+- 🔄 Section toggling without page reload
+- ⏱️ Automatic slideshow for gift tips
+- ❌ Error and success message handling
+- 📱 Responsive design for mobile and desktop
 
 ---
 
-## 💡 Jak projekt spustit
+## 💡 How to Run the Project
 
-1. Naklonuj repozitář:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/uzivatel/rsvp-kids.git

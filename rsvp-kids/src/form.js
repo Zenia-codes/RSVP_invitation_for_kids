@@ -86,7 +86,7 @@ form.addEventListener("submit", function (e) {
   successMessage.classList.remove("hidden");
 });
 
-// slavnostni tabule
+// food table
 
 const foodToggle = document.querySelector("#foodToggle");
 const foodSection = document.querySelector("#foodSection");
@@ -95,7 +95,7 @@ foodToggle.addEventListener("change", () => {
   foodSection.classList.toggle("hidden");
 });
 
-// tipy na darky
+// tips on gifts
 
 const showGiftTips = document.querySelector("#showGiftTips");
 const giftCard = document.querySelector("#giftCard");
