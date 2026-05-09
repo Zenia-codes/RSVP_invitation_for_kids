@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rsvp-kids</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="invitation container">
+        <div class="title">
+          <h2>Přijď s námi oslavit</h2>
+          <span>5. narozeniny</span>
+          <h1>Sofinky</h1>
+          <p>Akce proběhne 8. 8. 2026 ve 14.00h</p>
+          <p>hernička Opice</p>
+          <p>Havlíčkovo nám. 12b Ostrava-Poruba</p>
+          <p class="info">
+            Vyplň prosím krátký registrační formulář (ideálně do konce
+            července), ať s tebou můžeme počítat 😎 Těšíme se na všechny.
+          </p>
+        </div>
+
+        <form class="form" id="contactForm">
+          <label for="name" class="sr-only">Jméno</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Jméno"
+            required
+          />
+
+          <label for="surname" class="sr-only">Příjmení</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            placeholder="Příjmení"
+            required
+          />
+
+          <label for="email" class="sr-only">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email"
+            required
+          />
+          <div class="numberOfPeople">
+            <div class="adults_kids">
+              <label for="numberOfAdults">Počet dospělých</label>
+              <input
+                type="number"
+                id="numberOfAdults"
+                name="numberOfAdults"
+                required
+              />
+            </div>
+            <div class="adults_kids">
+              <label for="numberOfKids">Počet dětí</label>
+              <input
+                type="number"
+                id="numberOfKids"
+                name="numberOfKids"
+                required
+              />
+            </div>
+          </div>
+
+          <label>
+            <input type="radio" name="attendance" value="yes" />
+            Zúčastním se 🎉
+          </label>
+
+          <label>
+            <input type="radio" name="attendance" value="no" />
+            Nemohu přijít 😒
+          </label>
+
+          <label for="message">Poznámka pro hostitele</label>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Např. přijdu později..."
+          ></textarea>
+
+          <label>
+            <input type="checkbox" id="foodToggle" />
+            Chci ovlivnit narozeninovou tabuli 🎂
+          </label>
+
+          <div class="foodSection hidden" id="foodSection">
+            <p>Co by ti na oslavě udělalo radost?</p>
+
+            <label>
+              <input type="checkbox" name="food" value="pizza" />
+              Pizza 🍕
+            </label>
+
+            <label>
+              <input type="checkbox" name="food" value="fruit" />
+              Ovocná mísa 🥗
+            </label>
+
+            <label>
+              <input type="checkbox" name="food" value="cake" />
+              Zákusek navíc 🧁
+            </label>
+
+            <label>
+              <input type="checkbox" name="food" value="nanuk" />
+              nanuk 🍡
+            </label>
+
+            <label>
+              <input type="checkbox" name="food" value="gril" />
+              grilované dobroty 🥩
+            </label>
+          </div>
+
+          <section class="gift-section">
+            <p>Hledáš inspiraci na dárek? 🎁</p>
+
+            <button type="button" id="showGiftTips">Zobrazit tip</button>
+
+            <div class="gift-card hidden" id="giftCard">
+              <img id="giftImage" src="" alt="" />
+
+              <h3 id="giftTitle"></h3>
+
+              <button type="button" id="nextGift">Další tip</button>
+            </div>
+          </section>
+
+          <label>
+            <input type="checkbox" id="agree" name="consent" />
+            *Souhlasím se zpracováním údajů
+          </label>
+
+          <button id="submitBtn" type="submit">Odeslat</button>
+
+          <p class="personalData">
+            *Osobní informace, poskytnuté v tomto formuláři slouží pouze k
+            organizačním účelům. Nebudou nikde zveřejňovány ani poskytovány
+            třetím osobám k reklamním účelům.
+          </p>
+          <div id="formMessages">
+            <p id="errorMessage" class="hidden"></p>
+            <p id="successMessage" class="hidden"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

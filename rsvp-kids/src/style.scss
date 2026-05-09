@@ -1,0 +1,110 @@
+@use "./reset.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: url("./assets/background_invitation2.png") repeat;
+}
+
+.header {
+  background: url("./assets/background_invitation_title.png") no-repeat top
+    center;
+  background-size: contain;
+  height: 400px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 270px 40px 20px 40px;
+}
+
+.invitation {
+  display: grid;
+  grid-template-columns: 1fr;
+  .title {
+    text-align: center;
+    .info {
+      font-size: 8px;
+      margin-top: 20px;
+    }
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .numberOfPeople {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .adults_kids input {
+        border: 2px solid rgb(123, 123, 123);
+        border-radius: 5px;
+        width: 10%;
+      }
+    }
+    .personalData {
+      font-size: 8px;
+    }
+
+    .foodSection {
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}
+
+/* not visible label*/
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
+
+.gift-card {
+  margin-top: 20px;
+  text-align: center;
+
+  img {
+    width: 220px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+#successMessage {
+  background-color: aquamarine;
+  padding: 10px;
+  margin-top: 15px;
+  &.hidden {
+    display: none;
+  }
+}
+
+#errorMessage {
+  background-color: rgb(255, 0, 30);
+  padding: 10px;
+  margin-top: 15px;
+  &.hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 780px) {
+  .layout {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr;
+  }
+
+  .invitation {
+    max-width: 40%;
+  }
+}
