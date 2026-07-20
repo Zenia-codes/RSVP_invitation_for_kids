@@ -5,6 +5,7 @@
 @use "./components/form/form";
 @use "./components/arrrow";
 @use "./styles/variables/fonts" as f;
+@use "./styles/variables/colors" as c;
 @use "./components/footer";
 @use "./components/gifts";
 @use "./components/buttons" as b;
@@ -26,7 +27,7 @@ label {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  color: rgb(103 92 97 / 90%);
+  color: c.$textColor;
 }
 
 h1 {
@@ -59,7 +60,7 @@ span {
 
 strong {
   font-weight: 800;
-  color: rgb(160, 25, 164);
+  color: c.$violetMainColor;
 }
 
 body {

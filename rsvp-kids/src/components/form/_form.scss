@@ -1,4 +1,5 @@
 @use "../../styles/variables/fonts" as f;
+@use "../../styles/variables/colors" as c;
 
 .form {
   display: flex;
@@ -7,7 +8,7 @@
 
   .form_label {
     font-weight: 700;
-    color: rgb(160, 25, 164);
+    color: c.$violetMainColor;
     padding-block: 6px;
   }
 
@@ -34,7 +35,7 @@
   input,
   textarea {
     border-radius: 5px;
-    border: 1px solid rgb(123, 123, 123);
+    border: 1px solid c.$textColor;
   }
 
   label {
@@ -87,13 +88,12 @@
   textarea {
     margin-top: 1rem;
     width: 100%;
-    // další styly...
     &::placeholder {
-      color: rgb(150, 150, 150);
+      color: c.$textColor;
       font-family: f.$font-secondary;
       font-size: 13px;
       padding: 5px;
-      opacity: 1; // aby byl stejně výrazný ve všech prohlížečích
+      opacity: 1;
     }
   }
 }

@@ -1,3 +1,5 @@
+@use "../styles/variables/colors" as c;
+
 .gift-section {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
   padding-bottom: 80px;
   .form_label {
     font-weight: 800;
-    color: rgb(160, 25, 164);
+    color: c.$violetMainColor;
     padding-bottom: 10px;
   }
 }
