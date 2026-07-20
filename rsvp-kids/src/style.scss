@@ -27,7 +27,7 @@ button {
 }
 
 h1 {
-  font-size: 52px;
+  font-size: 57px;
   font-family: f.$font-main;
   @include g.rainbow-text;
   filter: drop-shadow(2px 1px 1px rgba(128, 128, 128, 0.866));
@@ -44,10 +44,15 @@ input {
 h2,
 span {
   font-family: f.$font-main;
-  font-size: 28px;
+  font-size: 30px;
   @include g.rainbow-text;
   filter: drop-shadow(0px 1px 0px rgba(128, 128, 128, 0.7));
   z-index: 0;
+}
+
+strong {
+  font-weight: 800;
+  color: rgb(214 94 115);
 }
 
 body {
@@ -94,7 +99,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 28px;
 
   .title {
     display: flex;
@@ -111,8 +116,26 @@ body {
     flex-direction: column;
     text-align: center;
 
-    p {
+    .dateTime,
+    .playroom {
+      font-family: f.$font-secondary;
+      font-weight: 800;
+      line-height: 1.3em;
+    }
+
+    .playroom {
+      font-size: 23px;
+    }
+
+    .dateTime {
+      font-size: 21px;
+    }
+
+    .placeText,
+    .adress {
       font-family: f.$font-main;
+      line-height: 1.6;
+      letter-spacing: 0.03em;
     }
   }
 }

@@ -1,15 +1,33 @@
 .changeLanguage {
   display: flex;
-  gap: 7px;
+  gap: 10px;
   justify-content: end;
-  padding: 10px;
+  padding-block: 10px;
 
   .lang-btn {
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 2;
     border-radius: 8px;
-    background-color: rgba(255, 192, 203, 0.708);
+    background: linear-gradient(
+      45deg,
+      #8abfe7 0%,
+      #93d7ee 18%,
+      #b2c2ec 36%,
+      #d3bce8 55%,
+      #e9c4da 74%,
+      #f3d8b2 88%,
+      #f6e3b6 100%
+    );
     border: 2px solid white;
+    filter: drop-shadow(2px 1px 1px rgba(128, 128, 128, 0.866));
+
+    &:hover {
+      filter: drop-shadow(3px 2px 3px rgba(128, 128, 128, 0.5));
+    }
+
+    &:active {
+      transform: scale(0.92);
+    }
   }
 }
