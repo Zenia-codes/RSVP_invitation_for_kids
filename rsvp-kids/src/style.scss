@@ -1,12 +1,13 @@
 @use "./styles/base/reset.css";
-@use "./styles/variables/gradients" as g;
+@use "./styles/variables/mixins/gradients" as g;
+@use "./styles/variables/mixins/rainbowButton" as r;
 @use "./components/header";
-@use "./components/translate/language";
 @use "./components/form/form";
 @use "./components/arrrow";
 @use "./styles/variables/fonts" as f;
 @use "./components/footer";
 @use "./components/gifts";
+@use "./components/buttons" as b;
 
 * {
   box-sizing: border-box;
@@ -20,8 +21,7 @@
 
 p,
 input,
-label,
-button {
+label {
   font-family: f.$font-secondary;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -68,6 +68,25 @@ body {
   min-height: 100vh;
   background: url("./assets/invitation2.png") repeat;
   overflow-x: hidden;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -999;
+
+    background: linear-gradient(
+      135deg,
+      #f7e7ef 0%,
+      #f6f1d9 25%,
+      #e7f5f1 50%,
+      #eef0fa 72%,
+      #f8e7ee 100%
+    );
+
+    opacity: 0.4;
+    pointer-events: none;
+  }
 }
 
 .gift-card {

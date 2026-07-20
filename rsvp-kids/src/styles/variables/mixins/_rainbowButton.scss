@@ -1,0 +1,43 @@
+@use "../fonts" as f;
+
+@mixin rainbowButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: f.$font-secondary;
+  font-weight: 800;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 10px #ffffff26;
+
+  color: rgb(160, 25, 164);
+
+  border: 2px solid white;
+  border-radius: 8px;
+
+  background: linear-gradient(
+    45deg,
+    #8abfe7 0%,
+    #93d7ee 18%,
+    #b2c2ec 36%,
+    #d3bce8 55%,
+    #e9c4da 74%,
+    #f3d8b2 88%,
+    #f6e3b6 100%
+  );
+
+  filter: drop-shadow(2px 1px 1px rgba(128, 128, 128, 0.86));
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  &:hover {
+    color: white;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

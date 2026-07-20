@@ -1,0 +1,34 @@
+@use "../styles/variables/fonts" as f;
+@use "../styles/variables/mixins/gradients" as g;
+@use "../styles/variables/mixins/rainbowButton" as r;
+
+button {
+  @include r.rainbowButton;
+}
+
+.changeLanguage {
+  display: flex;
+  gap: 10px;
+  padding-block: 10px;
+  justify-content: end;
+
+  .lang-btn {
+    min-width: 45px;
+    height: 35px;
+    font-size: 13px;
+  }
+}
+
+#submitBtn {
+  width: 220px;
+  height: 48px;
+  font-size: 18px;
+  align-self: center;
+}
+
+#showGiftTips {
+  width: 180px;
+  height: 42px;
+  font-size: 15px;
+  //   align-self: center;
+}
