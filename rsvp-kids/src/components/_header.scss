@@ -1,0 +1,24 @@
+.header {
+  position: relative;
+  background: url("../assets/invitation1_title.png") no-repeat top center;
+  background-size: cover;
+  aspect-ratio: 6 / 5;
+
+  //     &::before {
+  //     content: "";
+  //     position: fixed;
+  //     inset: 0;
+
+  //     background: linear-gradient(
+  //       135deg,
+  //       #f7e7ef 0%,
+  //       #f6f1d9 25%,
+  //       #e7f5f1 50%,
+  //       #eef0fa 72%,
+  //       #f8e7ee 100%
+  //     );
+
+  //     opacity: 0.6;
+  //     pointer-events: none;
+  //   }
+}

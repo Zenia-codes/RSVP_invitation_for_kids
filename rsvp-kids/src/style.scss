@@ -1,67 +1,61 @@
-@use "./reset.scss";
-
+@use "./styles/base/reset.css";
+@use "./styles/variables/gradients" as g;
+@use "./components/header";
+@use "./components/translate/language";
+@use "./components/form/form";
+@use "./components/arrrow";
+@use "./styles/variables/fonts" as f;
 * {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: url("./assets/background_invitation2.png") repeat;
-}
-
-.header {
-  background: url("./assets/background_invitation_title.png") no-repeat top
-    center;
-  background-size: contain;
-  height: 400px;
 }
 
 .container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 270px 40px 20px 40px;
+  padding-inline: 25px;
 }
 
-.invitation {
-  display: grid;
-  grid-template-columns: 1fr;
-  .title {
-    text-align: center;
-    .info {
-      font-size: 8px;
-      margin-top: 20px;
-    }
-  }
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    .numberOfPeople {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      .adults_kids input {
-        border: 2px solid rgb(123, 123, 123);
-        border-radius: 5px;
-        width: 10%;
-      }
-    }
-    .personalData {
-      font-size: 8px;
-    }
-
-    .foodSection {
-      &.hidden {
-        display: none;
-      }
-    }
-  }
+p,
+input,
+label,
+button {
+  font-family: f.$font-secondary;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(103 92 97 / 90%);
 }
 
-/* not visible label*/
-.sr-only {
-  position: absolute;
-  left: -9999px;
+h1 {
+  font-size: 52px;
+  font-family: f.$font-main;
+  @include g.rainbow-text;
+  filter: drop-shadow(2px 1px 1px rgba(128, 128, 128, 0.866));
+  z-index: 0;
+}
+
+p,
+label,
+input {
+  font-size: 15px;
+  line-height: 1.3em;
+}
+
+h2,
+span {
+  font-family: f.$font-main;
+  font-size: 28px;
+  @include g.rainbow-text;
+  filter: drop-shadow(0px 1px 0px rgba(128, 128, 128, 0.7));
+  z-index: 0;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+  background: url("./assets/invitation2.png") repeat;
+  overflow-x: hidden;
 }
 
 .gift-card {
@@ -82,7 +76,6 @@ body {
 #successMessage {
   background-color: aquamarine;
   padding: 10px;
-  margin-top: 15px;
   &.hidden {
     display: none;
   }
@@ -94,6 +87,46 @@ body {
   margin-top: 15px;
   &.hidden {
     display: none;
+  }
+}
+
+.invitation {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding-bottom: 40px;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    .birthday {
+      padding-bottom: 5px;
+    }
+  }
+
+  .subtitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    p {
+      font-family: f.$font-main;
+    }
+  }
+}
+
+.wrapper_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 20px;
+
+  .info {
+    text-align: center;
+    font-size: 8px;
   }
 }
 

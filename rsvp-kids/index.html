@@ -4,162 +4,178 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rum+Raisin&display=swap"
+      rel="stylesheet"
+    />
     <title>rsvp-kids</title>
   </head>
   <body>
-    <div class="header">
-      <div class="invitation container">
-        <div class="title">
-          <h2>Come celebrate</h2>
-          <span>5th birthday</span>
-          <h1>Sofinka's</h1>
-          <p>The event will take place on August 8, 2026 at 2:00 PM</p>
-          <p>Monkey Playroom</p>
-          <p>Havlíčkovo nám. 12b Ostrava-Poruba</p>
-          <p class="info">
-            Please fill out the short registration form (ideally by the end of
-            July) so we can count on you 😎 We’re looking forward to seeing
-            everyone.
-          </p>
-        </div>
-
-        <form class="form" id="contactForm">
-          <label for="name" class="sr-only">First Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="First Name"
-            required
-          />
-
-          <label for="surname" class="sr-only">Last Name</label>
-          <input
-            type="text"
-            id="surname"
-            name="surname"
-            placeholder="Last Name"
-            required
-          />
-
-          <label for="email" class="sr-only">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email"
-            required
-          />
-
-          <div class="numberOfPeople">
-            <div class="adults_kids">
-              <label for="numberOfAdults">Number of Adults</label>
-              <input
-                type="number"
-                id="numberOfAdults"
-                name="numberOfAdults"
-                required
-              />
-            </div>
-
-            <div class="adults_kids">
-              <label for="numberOfKids">Number of Children</label>
-              <input
-                type="number"
-                id="numberOfKids"
-                name="numberOfKids"
-                required
-              />
-            </div>
-          </div>
-
-          <label>
-            <input type="radio" name="attendance" value="yes" />
-            I will attend 🎉
-          </label>
-
-          <label>
-            <input type="radio" name="attendance" value="no" />
-            I can’t come 😒
-          </label>
-
-          <label for="message">Message for the Host</label>
-
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            placeholder="For example: I’ll arrive later..."
-          ></textarea>
-
-          <label>
-            <input type="checkbox" id="foodToggle" />
-            I want to help choose the birthday treats 🎂
-          </label>
-
-          <div class="foodSection hidden" id="foodSection">
-            <p>What would make you happy at the party?</p>
-
-            <label>
-              <input type="checkbox" name="food" value="pizza" />
-              Pizza 🍕
-            </label>
-
-            <label>
-              <input type="checkbox" name="food" value="fruit" />
-              Fruit platter 🥗
-            </label>
-
-            <label>
-              <input type="checkbox" name="food" value="cake" />
-              Extra dessert 🧁
-            </label>
-
-            <label>
-              <input type="checkbox" name="food" value="nanuk" />
-              Popsicle 🍡
-            </label>
-
-            <label>
-              <input type="checkbox" name="food" value="gril" />
-              Grilled goodies 🥩
-            </label>
-          </div>
-
-          <section class="gift-section">
-            <p>Looking for gift inspiration? 🎁</p>
-
-            <button type="button" id="showGiftTips">Show tip</button>
-
-            <div class="gift-card hidden" id="giftCard">
-              <img id="giftImage" src="" alt="" />
-
-              <h3 id="giftTitle"></h3>
-
-              <button type="button" id="nextGift">Next tip</button>
-            </div>
-          </section>
-
-          <label>
-            <input type="checkbox" id="agree" name="consent" />
-            *I agree to the processing of personal data
-          </label>
-
-          <button id="submitBtn" type="submit">Submit</button>
-
-          <p class="personalData">
-            *The personal information provided in this form is used solely for
-            organizational purposes. It will not be published or shared with
-            third parties for advertising purposes.
-          </p>
-
-          <div id="formMessages">
-            <p id="errorMessage" class="hidden"></p>
-            <p id="successMessage" class="hidden"></p>
-          </div>
-        </form>
+    <div class="header container">
+      <div class="changeLanguage">
+        <button class="lang-btn" data-lang="cs">CZ</button>
+        <button class="lang-btn" data-lang="en">EN</button>
       </div>
     </div>
+    <div class="invitation container">
+      <div class="title">
+        <h2>Come celebrate</h2>
+        <h1>Sophie's</h1>
+        <span class="birthday">5th birthday</span>
+      </div>
+      <div class="subtitle">
+        <p>The event will take place</p>
+        <p>on August 8, 2026 at 2:00 PM</p>
+        <p>Monkey Playroom</p>
+        <p>Havlíčkovo nám. 12b Ostrava-Poruba</p>
+      </div>
+    </div>
+
+    <div class="wrapper_info container">
+      <p class="info">
+        Please fill out the short <strong>registration form</strong> so we can
+        count on you.We're looking forward to seeing everyone.
+      </p>
+      <a href="#next" class="scroll-down" aria-label="Scroll down">
+        <svg viewBox="0 0 40 40" class="scroll-icon">
+          <circle cx="20" cy="20" r="18" />
+          <polyline points="12,17 20,25 28,17" />
+        </svg>
+      </a>
+    </div>
+
+    <form class="form container" id="contactForm">
+      <label for="name" class="sr-only">First Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="First Name"
+        required
+      />
+
+      <label for="surname" class="sr-only">Last Name</label>
+      <input
+        type="text"
+        id="surname"
+        name="surname"
+        placeholder="Last Name"
+        required
+      />
+
+      <label for="email" class="sr-only">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        required
+      />
+
+      <div class="numberOfPeople">
+        <div class="adults_kids">
+          <label for="numberOfAdults">Number of Adults</label>
+          <input
+            type="number"
+            id="numberOfAdults"
+            name="numberOfAdults"
+            required
+          />
+        </div>
+
+        <div class="adults_kids">
+          <label for="numberOfKids">Number of Children</label>
+          <input type="number" id="numberOfKids" name="numberOfKids" required />
+        </div>
+      </div>
+
+      <label>
+        <input type="radio" name="attendance" value="yes" />
+        I will attend 🎉
+      </label>
+
+      <label>
+        <input type="radio" name="attendance" value="no" />
+        I can’t come 😒
+      </label>
+
+      <label for="message">Message for the Host</label>
+
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        placeholder="For example: I’ll arrive later..."
+      ></textarea>
+
+      <label>
+        <input type="checkbox" id="foodToggle" />
+        I want to help choose the birthday treats 🎂
+      </label>
+
+      <div class="foodSection hidden" id="foodSection">
+        <p>What would make you happy at the party?</p>
+
+        <label>
+          <input type="checkbox" name="food" value="pizza" />
+          Pizza 🍕
+        </label>
+
+        <label>
+          <input type="checkbox" name="food" value="fruit" />
+          Fruit platter 🥗
+        </label>
+
+        <label>
+          <input type="checkbox" name="food" value="cake" />
+          Extra dessert 🧁
+        </label>
+
+        <label>
+          <input type="checkbox" name="food" value="nanuk" />
+          Popsicle 🍡
+        </label>
+
+        <label>
+          <input type="checkbox" name="food" value="gril" />
+          Grilled goodies 🥩
+        </label>
+      </div>
+
+      <section class="gift-section">
+        <p>Looking for gift inspiration? 🎁</p>
+
+        <button type="button" id="showGiftTips">Show tip</button>
+
+        <div class="gift-card hidden" id="giftCard">
+          <img id="giftImage" src="" alt="" />
+
+          <h3 id="giftTitle"></h3>
+
+          <button type="button" id="nextGift">Next tip</button>
+        </div>
+      </section>
+
+      <label>
+        <input type="checkbox" id="agree" name="consent" />
+        *I agree to the processing of personal data
+      </label>
+
+      <button id="submitBtn" type="submit">Submit</button>
+
+      <p class="personalData">
+        *The personal information provided in this form is used solely for
+        organizational purposes. It will not be published or shared with third
+        parties for advertising purposes.
+      </p>
+
+      <div id="formMessages">
+        <p id="errorMessage" class="hidden"></p>
+        <p id="successMessage" class="hidden"></p>
+      </div>
+    </form>
 
     <script type="module" src="/src/main.js"></script>
   </body>

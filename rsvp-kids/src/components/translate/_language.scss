@@ -1,0 +1,15 @@
+.changeLanguage {
+  display: flex;
+  gap: 7px;
+  justify-content: end;
+  padding: 10px;
+
+  .lang-btn {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 2;
+    border-radius: 8px;
+    background-color: rgba(255, 192, 203, 0.708);
+    border: 2px solid white;
+  }
+}

@@ -1,4 +1,4 @@
 import "./style.scss";
-import "./form.js";
+import "./components/form/form.js";
 
 // console.log("RSVP app started");

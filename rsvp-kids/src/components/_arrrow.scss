@@ -1,0 +1,39 @@
+.scroll-down {
+  display: inline-flex;
+  justify-self: center;
+  width: 40px;
+  height: 40px;
+  animation: bounce 1.8s infinite ease-in-out;
+
+  .scroll-icon {
+    width: 80%;
+    height: 80%;
+    fill: none;
+    stroke: rgb(214 94 115 / 88%);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    circle {
+      stroke-opacity: 0.7;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(6px);
+  }
+
+  60% {
+    transform: translateY(3px);
+  }
+}

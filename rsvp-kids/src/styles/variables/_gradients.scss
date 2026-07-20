@@ -1,0 +1,23 @@
+@mixin rainbow-text {
+  background: linear-gradient(
+    140deg,
+    #8abfe7 0%,
+    // jemná modrá
+    #93d7ee 18%,
+    // tyrkysová
+    #b2c2ec 36%,
+    // modrofialová
+    #d3bce8 55%,
+    // levandule
+    #e9c4da 74%,
+    // růžová
+    #f3d8b2 88%,
+    // meruňková
+    #f6e3b6 100% // krémově žlutá
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}

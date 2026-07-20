@@ -1,0 +1,44 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .numberOfPeople {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    .adults_kids {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 10px;
+
+      input {
+        border: 2px solid rgb(123, 123, 123);
+        border-radius: 5px;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+      }
+    }
+  }
+  .personalData {
+    font-size: 8px;
+  }
+
+  .foodSection {
+    display: flex;
+    flex-direction: column;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  /* not visible label*/
+  .sr-only {
+    position: absolute;
+    left: -9999px;
+  }
+}
