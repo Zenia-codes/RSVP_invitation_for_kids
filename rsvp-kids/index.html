@@ -28,23 +28,20 @@
     </div>
     <div class="invitation container">
       <div class="title">
-        <h2>Come celebrate</h2>
-        <h1>Sophie's</h1>
-        <span class="birthday">5th birthday</span>
+        <h2 data-i18n="invitation.title.inv"></h2>
+        <h1 class="child" data-i18n="invitation.title.name"></h1>
+        <span class="birthday" data-i18n="invitation.title.year"></span>
       </div>
       <div class="subtitle">
-        <p class="placeText">The event will take place</p>
-        <span class="dateTime">8. 8. 2026 at 3:00 PM</span>
-        <span class="playroom">"Monkey Playroom"</span>
-        <p class="adress">Havlíčkovo nám. 12b Ostrava-Poruba</p>
+        <p class="placeText" data-i18n="invitation.subtitle.event"></p>
+        <span class="dateTime" data-i18n="invitation.subtitle.time"></span>
+        <span class="playroom" data-i18n="invitation.subtitle.place"></span>
+        <p class="adress" data-i18n="invitation.subtitle.address"></p>
       </div>
     </div>
 
     <div class="wrapper_info container">
-      <p class="info">
-        Please fill out <strong>the short registration form</strong> so we know
-        you're coming.
-      </p>
+      <p class="info" data-i18n="invitation.info" data-html></p>
       <a href="#next" class="scroll-down" aria-label="Scroll down">
         <svg viewBox="0 0 40 40" class="scroll-icon">
           <circle cx="20" cy="20" r="18" />
@@ -54,13 +51,14 @@
     </div>
 
     <form class="form container" id="contactForm">
-      <p class="form_label">Enter full name and email</p>
-      <label for="name" class="sr-only">First Name</label>
+      <p class="form_label" data-i18n="form.fullName"></p>
+      <label for="name" class="sr-only">first Name</label>
       <input
         type="text"
         id="name"
         name="name"
         placeholder="First Name"
+        data-i18n-placeholder="form.firstName"
         required
       />
 
@@ -70,37 +68,36 @@
         id="surname"
         name="surname"
         placeholder="Last Name"
+        data-i18n-placeholder="form.lastName"
         required
       />
 
-      <label for="email" class="sr-only">Email</label>
+      <label for="email" class="sr-only">E-mail</label>
       <input
         type="email"
         id="email"
         name="email"
-        placeholder="Email"
+        placeholder="E-mail"
         required
       />
       <div class="attendance">
-        <p class="form_label">Let us know if you're coming</p>
+        <p class="form_label" data-i18n="form.invite"></p>
         <label>
           <input type="radio" name="attendance" value="yes" />
-          I will attend
+          <p data-i18n="form.yes">I will attend</p>
         </label>
 
         <label>
           <input type="radio" name="attendance" value="no" />
-          I can’t come
+          <p data-i18n="form.no">I can't come</p>
         </label>
       </div>
 
       <div class="numberOfPeople">
-        <p class="form_label">
-          How many of you will be coming (or not coming) including you?
-        </p>
+        <p class="form_label" data-i18n="form.howManyPeople"></p>
         <div class="wrapper_adultsKids">
           <div class="adults_kids">
-            <label for="numberOfAdults">Adults</label>
+            <label for="numberOfAdults" data-i18n="form.adults">Adults</label>
             <input
               type="number"
               id="numberOfAdults"
@@ -110,7 +107,7 @@
           </div>
 
           <div class="adults_kids">
-            <label for="numberOfKids">Children</label>
+            <label for="numberOfKids" data-i18n="form.children">Children</label>
             <input
               type="number"
               id="numberOfKids"
@@ -122,13 +119,14 @@
       </div>
 
       <details class="messageForHost">
-        <summary>You can also include a short message.</summary>
+        <summary data-i18n="form.message"></summary>
 
         <textarea
           id="message"
           name="message"
           rows="4"
           placeholder="For example: I’ll arrive later..."
+          data-i18n-placeholder="form.textPlaceholder"
         ></textarea>
       </details>
 
@@ -177,16 +175,20 @@
       <div class="submit">
         <label class="agree">
           <input type="checkbox" id="agree" name="consent" />
-          *I agree to the processing of personal data
+          <p data-i18n="form.agree">
+            *I agree to the processing of personal data.
+          </p>
         </label>
+        <p class="personalData" data-i18n="form.personalData"></p>
 
-        <button id="submitBtn" type="submit" class="form_label">Submit</button>
-
-        <p class="personalData">
-          *The personal information provided in this form is used solely for
-          organizational purposes. It will not be published or shared with third
-          parties for advertising purposes.
-        </p>
+        <button
+          id="submitBtn"
+          type="submit"
+          class="form_label"
+          data-i18n="form.buttonSubmit"
+        >
+          Submit
+        </button>
 
         <div id="formMessages">
           <p id="errorMessage" class="hidden"></p>
@@ -196,16 +198,20 @@
     </form>
 
     <section class="gift-section container">
-      <p class="form_label">Looking for gift inspiration?</p>
+      <p class="form_label" data-i18n="form.giftIns"></p>
 
-      <button type="button" id="showGiftTips">Show tips</button>
+      <button type="button" id="showGiftTips" data-i18n="form.giftShow">
+        Show tips
+      </button>
 
       <div class="gift-card hidden" id="giftCard">
         <img id="giftImage" src="" alt="" />
 
         <h3 id="giftTitle"></h3>
 
-        <button type="button" id="nextGift">Next tip</button>
+        <button type="button" id="nextGift" data-i18n="form.giftNext">
+          Next tip
+        </button>
       </div>
     </section>
 

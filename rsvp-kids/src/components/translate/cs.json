@@ -1,0 +1,38 @@
+{
+  "invitation": {
+    "title": {
+      "inv": "Zveme tě na",
+      "name": "Sofinčiny",
+      "year": "5. narozeniny"
+    },
+
+    "subtitle": {
+      "event": "Oslava proběhne",
+      "time": "8. 8. 2026 v 15:00h",
+      "place": "Dětská herna Opice",
+      "address": "Havlíčkovo nám. 12b Ostrava-Poruba"
+    },
+
+    "info": "Prosím, vyplňte <strong>krátký registrační formulář</strong>, abychom věděli, že přijdete."
+  },
+
+  "form": {
+    "fullName": "Napiš sem svoje celé jméno",
+    "firstName": "Křestní jméno",
+    "lastName": "Příjmení",
+    "invite": "Dej vědět, jestli přijdeš",
+    "yes": "Ano, příjdu",
+    "no": "Ne, nemohu přijít",
+    "howManyPeople": "Kolik osob včetně tebe se zúčastní / nezúčastní?",
+    "adults": "Dospělý",
+    "children": "Dítě",
+    "message": "Chceš něco dodat? Napiš to sem. 💌",
+    "textPlaceholder": "Např.: Přijdu později, protože...",
+    "agree": "*Souhlasím se zpracováním osobních údajů.",
+    "buttonSubmit": "Odeslat",
+    "personalData": "*Osobní údaje slouží pouze k organizaci oslavy. Nebudou zveřejněny ani použity k reklamním účelům.",
+    "giftIns": "Hledáš inspiraci na dárek?",
+    "giftShow": "Ukaž tipy",
+    "giftNext": "Další tip"
+  }
+}

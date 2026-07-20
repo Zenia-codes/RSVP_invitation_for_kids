@@ -38,6 +38,14 @@
     border: 1px solid c.$textColor;
   }
 
+  textarea {
+    padding: 8px;
+    font-family: f.$font-secondary;
+    font-size: 14px;
+    color: c.$textColor;
+    font-weight: 600;
+  }
+
   label {
     display: flex;
     align-items: center;
@@ -77,7 +85,7 @@
   }
 
   summary {
-    color: rgb(123, 123, 123);
+    color: c.$textColor;
     font-family: f.$font-secondary;
     font-size: 14px;
     font-weight: 600;

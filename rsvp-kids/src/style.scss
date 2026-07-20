@@ -54,7 +54,7 @@ span {
   font-family: f.$font-main;
   font-size: 30px;
   @include g.rainbow-text;
-  filter: drop-shadow(0px 1px 0px rgba(160, 25, 164, 0.7));
+  filter: drop-shadow(1px 2px 0px rgba(128, 128, 128, 0.7));
   z-index: 0;
 }
 
@@ -106,7 +106,9 @@ body {
 }
 
 #successMessage {
-  background-color: rgb(245, 99, 203);
+  background-color: rgb(251, 181, 231);
+  border: 3px solid rgb(253, 77, 203);
+  border-radius: 8px;
   padding: 10px;
   &.hidden {
     display: none;
@@ -114,7 +116,9 @@ body {
 }
 
 #errorMessage {
-  background-color: rgb(255, 239, 8);
+  background-color: rgb(255, 249, 172);
+  border: 3px solid rgb(255, 243, 75);
+  border-radius: 8px;
   padding: 10px;
   &.hidden {
     display: none;
@@ -132,6 +136,9 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 5px;
+    .child {
+      padding-block: 5px;
+    }
     .birthday {
       padding-bottom: 5px;
     }
@@ -154,14 +161,14 @@ body {
     }
 
     .dateTime {
-      font-size: 21px;
+      font-size: 26px;
     }
 
     .placeText,
     .adress {
       font-family: f.$font-main;
       line-height: 1.6;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.05em;
     }
   }
 }

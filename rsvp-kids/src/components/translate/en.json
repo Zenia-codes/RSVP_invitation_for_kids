@@ -1,0 +1,38 @@
+{
+  "invitation": {
+    "title": {
+      "inv": "Come celebrate",
+      "name": "Sophie's",
+      "year": "5th birthday"
+    },
+
+    "subtitle": {
+      "event": "The event will take place",
+      "time": "8. 8. 2026, 3:00 PM",
+      "place": "Monkey Playroom",
+      "address": "Havlíčkovo nám. 12b Ostrava-Poruba"
+    },
+
+    "info": "Please fill out <strong>the short registration form</strong> so we know you're coming."
+  },
+
+  "form": {
+    "fullName": "Enter full name and email",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "invite": "Let us know if you're coming",
+    "yes": "Yes, I will attend",
+    "no": "No, I can’t come",
+    "howManyPeople": "How many of you will be coming (or not coming) including you?",
+    "adults": "Adults",
+    "children": "Child",
+    "message": "Do you want to add something? Write it here.",
+    "textPlaceholder": "For example: I’ll arrive later...",
+    "agree": "*I agree to the processing of personal data.",
+    "buttonSubmit": "Submit",
+    "personalData": "Personal data is used solely for organizing the celebration. It will not be published or used for advertising purposes.",
+    "giftIns": "Looking for gift inspiration?",
+    "giftShow": "Show tips",
+    "giftNext": "Next tip"
+  }
+}
