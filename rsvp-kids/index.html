@@ -10,6 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rum+Raisin&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>rsvp-kids</title>
   </head>
   <body>
@@ -27,7 +34,7 @@
       </div>
       <div class="subtitle">
         <p class="placeText">The event will take place</p>
-        <span class="dateTime">8. 8. 2026 at 2:00 PM</span>
+        <span class="dateTime">8. 8. 2026 at 3:00 PM</span>
         <span class="playroom">"Monkey Playroom"</span>
         <p class="adress">Havlíčkovo nám. 12b Ostrava-Poruba</p>
       </div>
@@ -47,6 +54,7 @@
     </div>
 
     <form class="form container" id="contactForm">
+      <p class="form_label">Enter full name and email</p>
       <label for="name" class="sr-only">First Name</label>
       <input
         type="text"
@@ -73,109 +81,176 @@
         placeholder="Email"
         required
       />
+      <div class="attendance">
+        <p class="form_label">Let us know if you're coming.</p>
+        <label>
+          <input type="radio" name="attendance" value="yes" />
+          I will attend 🎉
+        </label>
+
+        <label>
+          <input type="radio" name="attendance" value="no" />
+          I can’t come 😒
+        </label>
+      </div>
 
       <div class="numberOfPeople">
-        <div class="adults_kids">
-          <label for="numberOfAdults">Number of Adults</label>
-          <input
-            type="number"
-            id="numberOfAdults"
-            name="numberOfAdults"
-            required
-          />
-        </div>
+        <p class="form_label">
+          How many of you will be coming (or not coming) including you?
+        </p>
+        <div class="wrapper_adultsKids">
+          <div class="adults_kids">
+            <label for="numberOfAdults">Adults</label>
+            <input
+              type="number"
+              id="numberOfAdults"
+              name="numberOfAdults"
+              required
+            />
+          </div>
 
-        <div class="adults_kids">
-          <label for="numberOfKids">Number of Children</label>
-          <input type="number" id="numberOfKids" name="numberOfKids" required />
+          <div class="adults_kids">
+            <label for="numberOfKids">Children</label>
+            <input
+              type="number"
+              id="numberOfKids"
+              name="numberOfKids"
+              required
+            />
+          </div>
         </div>
       </div>
 
-      <label>
-        <input type="radio" name="attendance" value="yes" />
-        I will attend 🎉
-      </label>
+      <details class="messageForHost">
+        <summary>You can also include a short message.</summary>
 
-      <label>
-        <input type="radio" name="attendance" value="no" />
-        I can’t come 😒
-      </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="For example: I’ll arrive later..."
+        ></textarea>
+      </details>
 
-      <label for="message">Message for the Host</label>
+      <!-- <div class="food">
+        <p class="form_label">What would make you happy at the party?</p>
 
-      <textarea
-        id="message"
-        name="message"
-        rows="4"
-        placeholder="For example: I’ll arrive later..."
-      ></textarea>
+        <button type="button" id="showOffer">show offer</button>
 
-      <label>
-        <input type="checkbox" id="foodToggle" />
-        I want to help choose the birthday treats 🎂
-      </label>
+        <div class="foodSection hidden" id="foodSection">
+          <label>
+            <input type="checkbox" name="food" value="pizza" />
+            Pizza 🍕
+          </label>
 
-      <div class="foodSection hidden" id="foodSection">
-        <p>What would make you happy at the party?</p>
+          <label>
+            <input type="checkbox" name="food" value="fruit" />
+            Fruit platter 🥗
+          </label>
 
-        <label>
-          <input type="checkbox" name="food" value="pizza" />
-          Pizza 🍕
-        </label>
+          <label>
+            <input type="checkbox" name="food" value="cake" />
+            Extra dessert 🧁
+          </label>
 
-        <label>
-          <input type="checkbox" name="food" value="fruit" />
-          Fruit platter 🥗
-        </label>
+          <label>
+            <input type="checkbox" name="food" value="nanuk" />
+            Popsicles 🍡
+          </label>
 
-        <label>
-          <input type="checkbox" name="food" value="cake" />
-          Extra dessert 🧁
-        </label>
+          <label>
+            <input type="checkbox" name="food" value="gril" />
+            Grilled goodies 🥩
+          </label>
 
-        <label>
-          <input type="checkbox" name="food" value="nanuk" />
-          Popsicle 🍡
-        </label>
+          <label>
+            <input type="checkbox" name="food" value="gril" />
+            entertainment program for kids 🎈
+          </label>
 
-        <label>
-          <input type="checkbox" name="food" value="gril" />
-          Grilled goodies 🥩
-        </label>
-      </div>
-
-      <section class="gift-section">
-        <p>Looking for gift inspiration? 🎁</p>
-
-        <button type="button" id="showGiftTips">Show tip</button>
-
-        <div class="gift-card hidden" id="giftCard">
-          <img id="giftImage" src="" alt="" />
-
-          <h3 id="giftTitle"></h3>
-
-          <button type="button" id="nextGift">Next tip</button>
+          <label>
+            <input type="checkbox" name="food" value="gril" />
+            Something others?
+          </label>
         </div>
-      </section>
+      </div> -->
+      <div class="submit">
+        <label class="agree">
+          <input type="checkbox" id="agree" name="consent" />
+          *I agree to the processing of personal data
+        </label>
 
-      <label>
-        <input type="checkbox" id="agree" name="consent" />
-        *I agree to the processing of personal data
-      </label>
+        <button id="submitBtn" type="submit" class="form_label">Submit</button>
 
-      <button id="submitBtn" type="submit">Submit</button>
+        <p class="personalData">
+          *The personal information provided in this form is used solely for
+          organizational purposes. It will not be published or shared with third
+          parties for advertising purposes.
+        </p>
 
-      <p class="personalData">
-        *The personal information provided in this form is used solely for
-        organizational purposes. It will not be published or shared with third
-        parties for advertising purposes.
-      </p>
-
-      <div id="formMessages">
-        <p id="errorMessage" class="hidden"></p>
-        <p id="successMessage" class="hidden"></p>
+        <div id="formMessages">
+          <p id="errorMessage" class="hidden"></p>
+          <p id="successMessage" class="hidden"></p>
+        </div>
       </div>
     </form>
+
+    <section class="gift-section container">
+      <p class="form_label">Looking for gift inspiration?</p>
+
+      <button type="button" id="showGiftTips">Show tips</button>
+
+      <div class="gift-card hidden" id="giftCard">
+        <img id="giftImage" src="" alt="" />
+
+        <h3 id="giftTitle"></h3>
+
+        <button type="button" id="nextGift">Next tip</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <ul class="socials_list">
+        <li>
+          <a href="mailto:zenia.codes@gmail.com" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/zde%C5%88ka-be%C5%A5%C3%A1kov%C3%A1-a7505b372/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/zenia-codes"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://wa.me/420775500744"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="footer__copyright">
+        © 2026 Designed & Developed by Zdeňka Beťáková
+      </p>
+    </footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>
