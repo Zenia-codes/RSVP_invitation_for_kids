@@ -1,13 +1,13 @@
 @mixin rainbow-text {
   background: linear-gradient(
     140deg,
-    #8abfe7 0%,
-    #93d7ee 18%,
-    #b2c2ec 36%,
-    #d3bce8 55%,
-    #e9c4da 74%,
-    #f3d8b2 88%,
-    #f6e3b6 100%
+    #5fa8df 0%,
+    #6fc7e8 22%,
+    #9aaee8 38%,
+    #c39be3 45%,
+    #e69ac3 60%,
+    #f2b879 75%,
+    #f7d98b 85%
   );
 
   background-clip: text;
