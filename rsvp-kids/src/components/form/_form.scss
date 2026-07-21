@@ -21,35 +21,44 @@
       display: flex;
       flex-direction: row-reverse;
       gap: 8px;
+
+      input {
+        max-width: 50px;
+        height: 28px;
+        text-align: center;
+        flex-shrink: 0;
+      }
     }
   }
 
-  #numberOfAdults,
-  #numberOfKids,
-  #foodToggle {
-    max-width: 50px;
-    height: 28px;
-    text-align: center;
-  }
-
-  input,
-  textarea {
-    border-radius: 5px;
-    border: 1px solid c.$textColor;
-  }
-
-  textarea {
-    padding: 8px;
-    font-family: f.$font-secondary;
-    font-size: 14px;
-    color: c.$textColor;
-    font-weight: 600;
-  }
-
-  label {
+  .wrapper_agree {
     display: flex;
-    align-items: center;
-    gap: 5px;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    gap: 3px;
+    background-color: rgba(253, 190, 255, 0.53);
+    box-shadow: 1px 1px 1px 0px rgba(128, 128, 128, 0.3);
+
+    .agree {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+
+      input {
+        margin-top: 2px;
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
   }
 
   .attendance {
@@ -57,26 +66,6 @@
     flex-direction: column;
     gap: 5px;
   }
-
-  .personalData {
-    font-size: 8px;
-    padding-bottom: 20px;
-  }
-
-  .agree {
-    display: flex;
-    gap: 6px;
-    font-size: 10px;
-  }
-
-  // .food {
-  //   display: flex;
-  //   flex-direction: column;
-
-  //   &.hidden {
-  //     display: none;
-  //   }
-  // }
 
   /* not visible label*/
   .sr-only {
@@ -91,6 +80,7 @@
     font-weight: 600;
     text-decoration: underline;
     cursor: pointer;
+    padding-block: 10px;
   }
 
   textarea {
@@ -105,3 +95,12 @@
     }
   }
 }
+
+// .food {
+//   display: flex;
+//   flex-direction: column;
+
+//   &.hidden {
+//     display: none;
+//   }
+// }

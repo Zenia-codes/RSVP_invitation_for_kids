@@ -28,11 +28,33 @@
     "children": "Child",
     "message": "Do you want to add something? Write it here.",
     "textPlaceholder": "For example: I’ll arrive later...",
-    "agree": "*I agree to the processing of personal data.",
+    "agree": "* I consent to the processing of my personal data, which will be used solely for the organizational purposes of the celebration.",
     "buttonSubmit": "Submit",
-    "personalData": "Personal data is used solely for organizing the celebration. It will not be published or used for advertising purposes.",
     "giftIns": "Looking for gift inspiration?",
     "giftShow": "Show tips",
     "giftNext": "Next tip"
+  },
+
+  "messages": {
+    "submit": {
+      "success": "Done ✨ The form has been successfully submitted. I will get back to you shortly. I look forward to working with you.",
+      "error": "Something went wrong 🚨 Please try again later."
+    },
+
+    "validation": {
+      "nameTooShort": "Please enter your full first name 🙂",
+      "nameTooLong": "That first name is suspiciously long 😄",
+      "nameIsWrong": "The first name contains invalid characters 🤔",
+      "shortSurname": "Please enter your full surname 🙂",
+      "surnameTooLong": "That surname is suspiciously long 😄",
+      "surnameIsWrong": "The surname contains invalid characters 🤔",
+      "emailInvalid": "Please enter a valid email address.",
+      "emailMissingDot": "The email address is missing a dot.",
+      "attendance": "Please let us know if you're coming ✨",
+      "adults": "There must be at least one adult 😊",
+      "consent": "You must agree to the processing of personal data."
+    },
+
+    "sending": "sending..."
   }
 }

@@ -1,0 +1,68 @@
+@use "../styles/variables/fonts" as f;
+
+.invitation {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding-bottom: 22px;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    .child {
+      padding-block: 5px;
+    }
+    .birthday {
+      padding-bottom: 5px;
+    }
+  }
+
+  .subtitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .dateTime,
+    .playroom {
+      font-family: f.$font-secondary;
+      font-weight: 800;
+      line-height: 1.3em;
+    }
+
+    .playroom {
+      font-size: 23px;
+    }
+
+    .dateTime {
+      font-size: 26px;
+    }
+
+    .placeText,
+    .adress {
+      font-family: f.$font-main;
+      line-height: 1.6;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+.wrapper_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 20px;
+
+  .info {
+    text-align: center;
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 780px) {
+  .invitation {
+    max-width: 40%;
+  }
+}

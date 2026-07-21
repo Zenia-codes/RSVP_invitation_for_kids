@@ -9,6 +9,7 @@
 @use "./components/footer";
 @use "./components/gifts";
 @use "./components/buttons" as b;
+@use "./components/invitation";
 
 * {
   box-sizing: border-box;
@@ -21,13 +22,44 @@
 }
 
 p,
+label,
 input,
-label {
+textarea {
   font-family: f.$font-secondary;
   font-optical-sizing: auto;
-  font-weight: 500;
   font-style: normal;
   color: c.$textColor;
+}
+
+p,
+label,
+input {
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+input {
+  padding: 3px 4px;
+  font-weight: 500;
+}
+
+textarea {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  border: 1px solid c.$textColor;
+  border-radius: 5px;
 }
 
 h1 {
@@ -36,17 +68,6 @@ h1 {
   @include g.rainbow-text;
   filter: drop-shadow(2px 1px 1px rgba(128, 128, 128, 0.866));
   z-index: 0;
-}
-
-p,
-label,
-input {
-  font-size: 15px;
-  line-height: 1.3em;
-}
-
-input {
-  padding: 3px 4px;
 }
 
 h2,
@@ -125,81 +146,10 @@ body {
   }
 }
 
-.invitation {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  padding-bottom: 22px;
-
-  .title {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 5px;
-    .child {
-      padding-block: 5px;
-    }
-    .birthday {
-      padding-bottom: 5px;
-    }
-  }
-
-  .subtitle {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-    .dateTime,
-    .playroom {
-      font-family: f.$font-secondary;
-      font-weight: 800;
-      line-height: 1.3em;
-    }
-
-    .playroom {
-      font-size: 23px;
-    }
-
-    .dateTime {
-      font-size: 26px;
-    }
-
-    .placeText,
-    .adress {
-      font-family: f.$font-main;
-      line-height: 1.6;
-      letter-spacing: 0.05em;
-    }
-  }
-}
-
-.wrapper_info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  padding-bottom: 20px;
-
-  .info {
-    text-align: center;
-    font-size: 8px;
-  }
-}
-
-.submit {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 @media (min-width: 780px) {
   .layout {
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr;
-  }
-
-  .invitation {
-    max-width: 40%;
   }
 }

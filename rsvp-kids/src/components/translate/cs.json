@@ -13,26 +13,48 @@
       "address": "Havlíčkovo nám. 12b Ostrava-Poruba"
     },
 
-    "info": "Prosím, vyplňte <strong>krátký registrační formulář</strong>, abychom věděli, že přijdete."
+    "info": "Prosím, vyplň <strong>krátký registrační formulář</strong>, abychom s tebou počítali."
   },
 
   "form": {
-    "fullName": "Napiš sem svoje celé jméno",
+    "fullName": "Napiš sem svoje celé jméno a e-mail",
     "firstName": "Křestní jméno",
     "lastName": "Příjmení",
     "invite": "Dej vědět, jestli přijdeš",
     "yes": "Ano, příjdu",
     "no": "Ne, nemohu přijít",
-    "howManyPeople": "Kolik osob včetně tebe se zúčastní / nezúčastní?",
+    "howManyPeople": "Kolik osob včetně tebe se zúčastní (případně nezúčastní)?",
     "adults": "Dospělý",
     "children": "Dítě",
     "message": "Chceš něco dodat? Napiš to sem. 💌",
     "textPlaceholder": "Např.: Přijdu později, protože...",
-    "agree": "*Souhlasím se zpracováním osobních údajů.",
+    "agree": "* Souhlasím se zpracováním osobních údajů, které budou použity pouze k organizačním účelům oslavy.",
     "buttonSubmit": "Odeslat",
-    "personalData": "*Osobní údaje slouží pouze k organizaci oslavy. Nebudou zveřejněny ani použity k reklamním účelům.",
     "giftIns": "Hledáš inspiraci na dárek?",
     "giftShow": "Ukaž tipy",
     "giftNext": "Další tip"
+  },
+
+  "messages": {
+    "submit": {
+      "success": "Hotovo ✨ Formulář byl úspěšně odeslán. Brzy se vám ozvu. Těším se na případnou spolupráci.",
+      "error": "Něco se pokazilo 🚨 Zkuste to prosím znovu později."
+    },
+
+    "validation": {
+      "nameTooShort": "Zadej prosím celé jméno 🙂",
+      "nameTooLong": "Jméno je nějak podezřele dlouhé 😄",
+      "nameIsWrong": "Jméno obsahuje nepovolené znaky 🤔",
+      "shortSurname": "Zadej prosím celé příjmení 🙂",
+      "surnameTooLong": "Příjmení je nějak podezřele dlouhé 😄",
+      "surnameIsWrong": "Příjmení obsahuje nepovolené znaky 🤔",
+      "emailInvalid": "Prosím, vlož správnou e-mailovou adresu.",
+      "emailMissingDot": "V e-mailu chybí tečka.",
+      "attendance": "Dej nám prosím vědět, jestli dorazíš ✨",
+      "adults": "Musí být alespoň 1 dospělý😊",
+      "consent": "Hups...Ještě zbývá zaškrtnout souhlas se zpracováním osobních dat."
+    },
+
+    "sending": "Odesílám..."
   }
 }

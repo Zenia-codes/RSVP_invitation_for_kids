@@ -50,7 +50,7 @@
       </a>
     </div>
 
-    <form class="form container" id="contactForm">
+    <form class="form container" novalidate id="contactForm">
       <p class="form_label" data-i18n="form.fullName"></p>
       <label for="name" class="sr-only">first Name</label>
       <input
@@ -173,13 +173,14 @@
         </div>
       </div> -->
       <div class="submit">
-        <label class="agree">
-          <input type="checkbox" id="agree" name="consent" />
-          <p data-i18n="form.agree">
-            *I agree to the processing of personal data.
-          </p>
-        </label>
-        <p class="personalData" data-i18n="form.personalData"></p>
+        <div class="wrapper_agree">
+          <label class="agree">
+            <input type="checkbox" id="agree" name="consent" />
+            <p data-i18n="form.agree">
+              *I agree to the processing of personal data.
+            </p>
+          </label>
+        </div>
 
         <button
           id="submitBtn"
