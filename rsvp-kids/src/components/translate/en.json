@@ -17,17 +17,17 @@
   },
 
   "form": {
-    "fullName": "Enter full name and email",
+    "fullName": "Enter full name and email.",
     "firstName": "First Name",
     "lastName": "Last Name",
-    "invite": "Let us know if you're coming",
-    "yes": "Yes, I will attend",
-    "no": "No, I can’t come",
-    "howManyPeople": "How many of you will be coming (or not coming) including you?",
+    "invite": "Let us know if you're coming.",
+    "yes": "Yes, I will attend.",
+    "no": "No, I can’t come.",
+    "howManyPeople": "How many of you will be coming including you?",
     "adults": "Adults",
     "children": "Child",
-    "message": "Do you want to add something? Write it here.",
-    "textPlaceholder": "For example: I’ll arrive later...",
+    "message": "Do you want to add something? Write it here. 💌",
+    "textPlaceholder": "E.g.: I'll come later / We won't all come / I can't come because...",
     "agree": "* I consent to the processing of my personal data, which will be used solely for the organizational purposes of the celebration.",
     "buttonSubmit": "Submit",
     "giftIns": "Looking for gift inspiration?",
@@ -57,5 +57,23 @@
     },
 
     "sending": "sending..."
+  },
+
+  "giftTips": {
+    "artsAndCrafts": "Sofinka loves arts and crafts. Colored paper, craft kits, stencils, glitter and markers disappear at lightning speed in our house. ✂️✨",
+    "sensoryPlay": "She also loves modeling clay, kinetic sand, cookie cutters and textured rollers.",
+    "booksAndColoring": "Coloring books, stickers and storybooks are always a hit – especially those with kittens, princesses and superheroes.",
+    "clothes": "Pretty clothes in pink, purple or rainbow colors are always welcome. Size 116 and up.",
+    "accessories": "No princess is complete without accessories. 👑 Headbands, sunglasses, hair clips, hair ties, hair extensions, bracelets and handbags are always a great choice.",
+    "music": "In her free time, she transforms into a talented little musician. 🎵🎵🎵",
+    "kitchen": "A moment later she's cooking or baking delicious treats and happily selling them to us. 🍕🧁",
+    "police": "Sometimes she's a brave police officer chasing thieves with sirens blaring and a toy pistol in hand.",
+    "doctor": "Other times she becomes a doctor, taking great care of her stuffed animals (and her little brother). 🩺",
+    "building": "She loves building little houses, forts and all kinds of secret hideouts.",
+    "minecraftMagnetTiles": "Her favorite building toys are magnetic construction sets inspired by Minecraft.",
+    "magneticTiles": "She also loves magnetic tiles that look like colorful stained glass windows.",
+    "lego": "And of course, you can never go wrong with LEGO Classic or Duplo. 🧱",
+    "favoriteShows": "Her current favorites are Spidey, Iron Friends, Miraculous Ladybug, Bluey and Gabby's Dollhouse.",
+    "astrobot": "And the biggest hit of all? 🔥 Astro Bot on the PS5, which we love playing together."
   }
 }

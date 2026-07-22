@@ -17,17 +17,17 @@
   },
 
   "form": {
-    "fullName": "Napiš sem svoje celé jméno a e-mail",
+    "fullName": "Napiš sem svoje jméno a e-mail.",
     "firstName": "Křestní jméno",
     "lastName": "Příjmení",
-    "invite": "Dej vědět, jestli přijdeš",
-    "yes": "Ano, příjdu",
-    "no": "Ne, nemohu přijít",
-    "howManyPeople": "Kolik osob včetně tebe se zúčastní (případně nezúčastní)?",
+    "invite": "Dej vědět, jestli přijdeš.",
+    "yes": "Ano, příjdu.",
+    "no": "Ne, nemohu přijít.",
+    "howManyPeople": "Kolik osob včetně tebe se zúčastní?",
     "adults": "Dospělý",
     "children": "Dítě",
     "message": "Chceš něco dodat? Napiš to sem. 💌",
-    "textPlaceholder": "Např.: Přijdu později, protože...",
+    "textPlaceholder": "Např.: Přijdu později / Nepřijdeme všichni / nemohu přijít, protože...",
     "agree": "* Souhlasím se zpracováním osobních údajů, které budou použity pouze k organizačním účelům oslavy.",
     "buttonSubmit": "Odeslat",
     "giftIns": "Hledáš inspiraci na dárek?",
@@ -57,5 +57,23 @@
     },
 
     "sending": "Odesílám..."
+  },
+
+  "giftTips": {
+    "artsAndCrafts": "Sofinka ráda tvoří. Barevné papíry, vystřihovánky, šablony, třpytky nebo fixy u nás mizí rychlostí blesku. ✂️✨",
+    "sensoryPlay": "Potěší ji plastelína, tekutý písek i různá vykrajovátka a obtiskovací válečky.",
+    "booksAndColoring": "Omalovánky, samolepky a knížky – zvlášť s motivy kočiček, princezen a superhrdinů.",
+    "clothes": "Radost Sofince udělá i pěkné oblečení v odstínech růžové, fialové nebo duhové. Velikost 116 a větší.",
+    "accessories": "Žádná princezna se neobejde bez doplňků. 👑 Čelenky, brýle, sponky, gumičky, příčesky, náramky nebo kabelky jsou vždy trefou do černého.",
+    "music": "Ve volném čase se mění v talentovanou hudebnici. 🎵🎵🎵",
+    "kitchen": "Za chvíli už vaří nebo peče dobroty a potom nám je prodává. 🍕🧁",
+    "police": "Někdy je odvážnou policistkou a za zvuku sirén s pistolí v ruce honí zloděje.",
+    "doctor": "Jindy zachraňuje plyšáky (a bratříčka) jako paní doktorka. 🩺",
+    "building": "Ráda staví domečky, bunkry i nejrůznější skrýše.",
+    "minecraftMagnetTiles": "Nejvíc ji baví magnetické stavebnice ve stylu Minecraftu.",
+    "magneticTiles": "Velký úspěch mají i magnetické bloky připomínající barevná sklíčka.",
+    "lego": "A samozřejmě nesmí chybět klasika – LEGO Classic i Duplo. 🧱",
+    "favoriteShows": "Momentálně u nás vedou Spidey, Iron Friends, Kouzelná beruška, Bluey a Gábinin kouzelný domek.",
+    "astrobot": "A úplně největší hit? 🔥 Figurka Astrobota z PS5, kterého teď společně hrajeme."
   }
 }

@@ -8,20 +8,22 @@
 // });
 
 // tips on gifts
-import create from "../../assets/gifts/cut.png";
-import magicSand from "../../assets/gifts/magic-sand.png";
-import coloring from "../../assets/gifts/drawing.png";
-import dress from "../../assets/gifts/dress.png";
+import { t } from "../translate/language.js";
+
+import artsAndCrafts from "../../assets/gifts/cut.png";
+import sensoryPlay from "../../assets/gifts/magic-sand.png";
+import booksAndColoring from "../../assets/gifts/drawing.png";
+import clothes from "../../assets/gifts/dress.png";
 import accessories from "../../assets/gifts/accessories.png";
-import instruments from "../../assets/gifts/instruments.png";
-import pizza from "../../assets/gifts/pizza.png";
+import music from "../../assets/gifts/instruments.png";
+import kitchen from "../../assets/gifts/pizza.png";
 import police from "../../assets/gifts/police.png";
 import doctor from "../../assets/gifts/doctor.png";
-import house from "../../assets/gifts/house.png";
-import minecraft from "../../assets/gifts/minecraft2.png";
-import magBlocks from "../../assets/gifts/magnetic-blocks.png";
+import building from "../../assets/gifts/house.png";
+import minecraftMagnetTiles from "../../assets/gifts/minecraft2.png";
+import magneticTiles from "../../assets/gifts/magnetic-blocks.png";
 import lego from "../../assets/gifts/lego.png";
-import fairytail from "../../assets/gifts/fairytail.png";
+import favoriteShows from "../../assets/gifts/fairytail.png";
 import astrobot from "../../assets/gifts/astrobot.png";
 
 const showGiftTips = document.querySelector("#showGiftTips");
@@ -35,87 +37,77 @@ const previousGift = document.querySelector("#previousGift");
 
 const gifts = [
   {
-    title:
-      "Sofinka ráda tvoří. Barevné papíry, vystřihovánky, šablony, třpytky nebo fixy u nás mizí rychlostí blesku. ✂️✨",
-    image: create,
+    title: t("giftTips.artsAndCrafts"),
+    image: artsAndCrafts,
   },
 
   {
-    title:
-      "Potěší ji plastelína, tekutý písek i různé vykrajovátka a obtiskovací válečky.",
-    image: magicSand,
+    title: t("giftTips.sensoryPlay"),
+    image: sensoryPlay,
   },
 
   {
-    title:
-      "Omalovánky, samolepky a knížky - zvlášťe potom s motivy kočiček, princezen a superhrdinů.",
-    image: coloring,
+    title: t("giftTips.booksAndColoring"),
+    image: booksAndColoring,
   },
 
   {
-    title:
-      "Radost Sofince udělá i pěkné oblečení v odstínech růžové, fialové nebo duhové. Velikost 116 a větší.",
-    image: dress,
+    title: t("giftTips.clothes"),
+    image: clothes,
   },
 
   {
-    title:
-      "Žádná princezna se neobejde bez doplňků. 👑 Čelenky, brýle, sponky, gumičky, příčesky, náramky nebo kabelky jsou vždy trefou do černého.",
+    title: t("giftTips.accessories"),
     image: accessories,
   },
 
   {
-    title: "Ve volném čase je z ní talentovaná hudebnice. 🎵🎵🎵",
-    image: instruments,
+    title: t("giftTips.music"),
+    image: music,
   },
 
   {
-    title:
-      "O chvíli později už vaří nebo peče dobroty a potom nám je prodává. 🍕🧁",
-    image: pizza,
+    title: t("giftTips.kitchen"),
+    image: kitchen,
   },
 
   {
-    title:
-      "Někdy je odvážnou policistkou a za zvuku sirén s pistolí v ruce honí zloděje.",
+    title: t("giftTips.police"),
     image: police,
   },
 
   {
-    title: "Jindy zachraňuje plyšáky (a bratříčka) jako paní doktorka. 🩺",
+    title: t("giftTips.doctor"),
     image: doctor,
   },
 
   {
-    title: "Ráda staví domečky, bunkry i nejrůznější skrýše.",
-    image: house,
+    title: t("giftTips.building"),
+    image: building,
   },
 
   {
-    title: "Nejvíc ji baví magnetické stavebnice ve stylu Minecraftu.",
-    image: minecraft,
+    title: t("giftTips.minecraftMagnetTiles"),
+    image: minecraftMagnetTiles,
   },
 
   {
-    title:
-      "Velký úspěch mají i magnetické bloky připomínající barevná sklíčka.",
-    image: magBlocks,
+    title: t("giftTips.magneticTiles"),
+    image: magneticTiles,
   },
 
   {
-    title: "A samozřejmě nesmí chybět klasika – LEGO Classic i Duplo. 🧱",
+    title: t("giftTips.lego"),
     image: lego,
   },
 
   {
-    title:
-      "Momentálně u nás vedou pohádky jako Spidey, Iron Friends, Kouzelná beruška, Bluey a Gábinin kouzelný domek.",
-    image: fairytail,
+    title: t("giftTips.favoriteShows"),
+    image: favoriteShows,
   },
 
   {
-    title:
-      "A úplně největší hit? 🔥 Astrobot z hry na PS5, na kterého teď společně paříme.",
+    title: t("giftTips.astrobot"),
     image: astrobot,
   },
 ];
