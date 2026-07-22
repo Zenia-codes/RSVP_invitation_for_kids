@@ -5,10 +5,41 @@ const errorMessage = document.querySelector("#errorMessage");
 const successMessage = document.querySelector("#successMessage");
 const submitBtn = form.querySelector('button[type="submit"]');
 
+// konfety po úspěšném odeslání
+function launchConfetti() {
+  console.log("🎉 konfety spuštěny");
+  const colors = ["#ff6b9d", "#ffd166", "#06d6a0", "#118ab2", "#8338ec"];
+
+  const container = document.querySelector("#confetti");
+
+  if (!container) {
+    console.error("Confetti container not found.");
+    return;
+  }
+
+  for (let i = 0; i < 80; i++) {
+    const piece = document.createElement("div");
+
+    piece.classList.add("confetti");
+
+    piece.style.left = `${Math.random() * 100}%`;
+    piece.style.animationDuration = `${3 + Math.random() * 2}s`;
+
+    piece.style.backgroundColor =
+      colors[Math.floor(Math.random() * colors.length)];
+
+    container.appendChild(piece);
+    console.log(piece);
+
+    setTimeout(() => {
+      piece.remove();
+    }, 5000);
+  }
+}
+
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
-  //nejprve reset stareho stavu f.
   errorMessage.classList.add("hidden");
   successMessage.classList.add("hidden");
   errorMessage.textContent = "";
@@ -18,10 +49,13 @@ form.addEventListener("submit", async function (e) {
   const surname = document.querySelector("#surname").value.trim();
   const email = document.querySelector("#email").value.trim();
   const agree = document.querySelector("#agree").checked;
+
   const selectedRadio = document.querySelector(
     'input[name="attendance"]:checked'
   );
+
   const adults = Number(document.querySelector("#numberOfAdults").value);
+
   const [emailName, emailDomain] = email.split("@");
 
   if (name.length <= 2) {
@@ -106,18 +140,12 @@ form.addEventListener("submit", async function (e) {
   const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
 
   if (!ACCESS_KEY) {
-    errorMessage.dataset.i18n = "messages.submit.error";
-    errorMessage.textContent = t("messages.submit.error");
-    errorMessage.classList.remove("hidden");
-
     console.error("Web3Forms access key is missing.");
     return;
   }
 
   formData.append("access_key", ACCESS_KEY);
   formData.append("subject", "RSVP - Sofinka 5. narozeniny");
-  // formData.append("replyto", email);
-  // formData.append("cc", email);
 
   submitBtn.disabled = true;
   submitBtn.textContent = t("messages.sending");
@@ -130,10 +158,14 @@ form.addEventListener("submit", async function (e) {
 
     const result = await response.json();
 
+    console.log(result);
+
     if (result.success) {
       successMessage.dataset.i18n = "messages.submit.success";
       successMessage.textContent = t("messages.submit.success");
       successMessage.classList.remove("hidden");
+
+      launchConfetti();
 
       form.reset();
     } else {
