@@ -38,7 +38,7 @@
 
   "messages": {
     "submit": {
-      "success": "Done ✨ The form has been successfully submitted. I will get back to you shortly. I look forward to working with you.",
+      "success": "🎉 Thanks for your reply! We’ve received your confirmation. Whether you can make it or not, we really appreciate you letting us know.",
       "error": "Something went wrong 🚨 Please try again later."
     },
 

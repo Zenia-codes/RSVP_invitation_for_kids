@@ -3,6 +3,7 @@ import { t, changeLanguage } from "../translate/language.js";
 const form = document.querySelector(".form");
 const errorMessage = document.querySelector("#errorMessage");
 const successMessage = document.querySelector("#successMessage");
+const submitBtn = form.querySelector('button[type="submit"]');
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -100,11 +101,52 @@ form.addEventListener("submit", async function (e) {
     return;
   }
 
-  successMessage.dataset.i18n = "messages.submit.success";
-  successMessage.textContent = t("messages.submit.success");
-  successMessage.classList.remove("hidden");
+  const formData = new FormData(form);
 
-  // errorMessage.dataset.i18n = "messages.submit.error";
-  // errorMessage.textContent = t("messages.submit.error");
-  // errorMessage.classList.remove("hidden");
+  const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
+
+  if (!ACCESS_KEY) {
+    errorMessage.dataset.i18n = "messages.submit.error";
+    errorMessage.textContent = t("messages.submit.error");
+    errorMessage.classList.remove("hidden");
+
+    console.error("Web3Forms access key is missing.");
+    return;
+  }
+
+  formData.append("access_key", ACCESS_KEY);
+  formData.append("subject", "RSVP - Sofinka 5. narozeniny");
+  // formData.append("replyto", email);
+  // formData.append("cc", email);
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = t("messages.sending");
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      successMessage.dataset.i18n = "messages.submit.success";
+      successMessage.textContent = t("messages.submit.success");
+      successMessage.classList.remove("hidden");
+
+      form.reset();
+    } else {
+      throw new Error(result.message);
+    }
+  } catch (error) {
+    console.error(error);
+
+    errorMessage.dataset.i18n = "messages.submit.error";
+    errorMessage.textContent = t("messages.submit.error");
+    errorMessage.classList.remove("hidden");
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = t("form.buttonSubmit");
+  }
 });
