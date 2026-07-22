@@ -185,7 +185,7 @@
         <button
           id="submitBtn"
           type="submit"
-          class="form_label"
+          class="form_label btn--large"
           data-i18n="form.buttonSubmit"
         >
           Submit
@@ -201,18 +201,38 @@
     <section class="gift-section container">
       <p class="form_label" data-i18n="form.giftIns"></p>
 
-      <button type="button" id="showGiftTips" data-i18n="form.giftShow">
+      <button
+        type="button"
+        class="btn--medium"
+        id="showGiftTips"
+        data-i18n="form.giftShow"
+      >
         Show tips
       </button>
 
       <div class="gift-card hidden" id="giftCard">
+        <h3 class="giftTitle" id="giftTitle"></h3>
         <img id="giftImage" src="" alt="" />
 
-        <h3 id="giftTitle"></h3>
+        <div class="buttons_tip">
+          <button
+            type="button"
+            class="btn--small"
+            id="previousGift"
+            data-i18n="form.giftPrevious"
+          >
+            previous tip
+          </button>
 
-        <button type="button" id="nextGift" data-i18n="form.giftNext">
-          Next tip
-        </button>
+          <button
+            type="button"
+            class="btn--small"
+            id="nextGift"
+            data-i18n="form.giftNext"
+          >
+            Next tip
+          </button>
+        </div>
       </div>
     </section>
 

@@ -6,6 +6,19 @@ button {
   @include r.rainbowButton;
 }
 
+.btn--small {
+  font-size: 13px;
+  padding: 8px;
+}
+
+.btn--medium {
+  font-size: 15px;
+}
+
+.btn--large {
+  font-size: 18px;
+}
+
 .changeLanguage {
   display: flex;
   gap: 10px;
@@ -36,4 +49,5 @@ button {
   display: flex;
   flex-direction: column;
   gap: 7px;
+  padding-bottom: 40px;
 }

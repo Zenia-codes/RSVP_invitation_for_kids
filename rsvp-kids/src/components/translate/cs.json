@@ -32,7 +32,8 @@
     "buttonSubmit": "Odeslat",
     "giftIns": "Hledáš inspiraci na dárek?",
     "giftShow": "Ukaž tipy",
-    "giftNext": "Další tip"
+    "giftNext": "Další tip",
+    "giftPrevious": "Předchozí tip"
   },
 
   "messages": {

@@ -32,7 +32,8 @@
     "buttonSubmit": "Submit",
     "giftIns": "Looking for gift inspiration?",
     "giftShow": "Show tips",
-    "giftNext": "Next tip"
+    "giftNext": "Next tip",
+    "giftPrevious": "Previous tip"
   },
 
   "messages": {
