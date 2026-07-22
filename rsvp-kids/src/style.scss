@@ -167,13 +167,15 @@ body {
   animation: fall 3s linear forwards;
 }
 
+// animace konfet
 @keyframes fall {
   0% {
-    transform: translateY(0) rotate(0deg);
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
   }
 
   100% {
-    transform: translateY(110vh) rotate(720deg);
+    transform: translate(var(--drift), 110vh) rotate(720deg);
     opacity: 0;
   }
 }

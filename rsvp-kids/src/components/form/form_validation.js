@@ -5,7 +5,7 @@ const errorMessage = document.querySelector("#errorMessage");
 const successMessage = document.querySelector("#successMessage");
 const submitBtn = form.querySelector('button[type="submit"]');
 
-// konfety po úspěšném odeslání
+// konfety po úspěšném odeslání formuláře
 function launchConfetti() {
   console.log("🎉 konfety spuštěny");
   const colors = ["#ff6b9d", "#ffd166", "#06d6a0", "#118ab2", "#8338ec"];
@@ -24,6 +24,7 @@ function launchConfetti() {
 
     piece.style.left = `${Math.random() * 100}%`;
     piece.style.animationDuration = `${3 + Math.random() * 2}s`;
+    piece.style.setProperty("--drift", `${Math.random() * 200 - 100}px`);
 
     piece.style.backgroundColor =
       colors[Math.floor(Math.random() * colors.length)];
