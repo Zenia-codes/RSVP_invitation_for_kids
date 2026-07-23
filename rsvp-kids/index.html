@@ -20,12 +20,30 @@
     <title>rsvp-kids</title>
   </head>
   <body>
-    <div class="header container">
+    <!-- header -->
+    <section class="header container">
       <div class="changeLanguage">
         <button class="lang-btn" data-lang="cs">CZ</button>
         <button class="lang-btn" data-lang="en">EN</button>
       </div>
-    </div>
+    </section>
+    <!-- hero -->
+    <section class="hero container">
+      <div class="scene">
+        <div class="rainbow"></div>
+
+        <div class="castle"></div>
+
+        <div class="girl">
+          <img src="./src/assets/invitation_animation/Sofie.png" alt="girl" />
+        </div>
+
+        <div class="cloud cloud-back"></div>
+        <div class="cloud cloud-front"></div>
+        <div class="cloud cloud-front left"></div>
+      </div>
+    </section>
+    <!-- invitation text -->
     <div class="invitation container">
       <div class="title">
         <h2 data-i18n="invitation.title.inv"></h2>
@@ -39,7 +57,7 @@
         <p class="adress" data-i18n="invitation.subtitle.address"></p>
       </div>
     </div>
-
+    <!-- info form -->
     <div class="wrapper_info container">
       <p class="info" data-i18n="invitation.info" data-html></p>
       <a href="#next" class="scroll-down" aria-label="Scroll down">
@@ -49,7 +67,7 @@
         </svg>
       </a>
     </div>
-
+    <!-- form -->
     <form class="form container" novalidate id="contactForm">
       <p class="form_label" data-i18n="form.fullName"></p>
       <label for="name" class="sr-only">first Name</label>

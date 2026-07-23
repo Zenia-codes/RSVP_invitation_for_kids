@@ -1,0 +1,97 @@
+.hero {
+  aspect-ratio: 6 / 4.35;
+  position: relative;
+  overflow: hidden;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.scene > * {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.rainbow {
+  width: 125%;
+  background-image: url(/RSVP_invitation_for_kids/src/assets/invitation_animation/rainbow.png);
+  background-position: center top;
+  z-index: 1;
+  aspect-ratio: 6 / 3;
+  left: -7%;
+  bottom: 25%;
+}
+
+.castle {
+  width: 59%;
+  aspect-ratio: 1;
+  left: -16%;
+  bottom: 20%;
+  background-image: url(/RSVP_invitation_for_kids/src/assets/invitation_animation/castle.png);
+  z-index: 2;
+}
+
+.girl {
+  width: 55%;
+  left: 48%;
+  bottom: 15%;
+  transform: translateX(-48%);
+
+  z-index: 4;
+
+  img {
+    width: 100%;
+  }
+}
+
+.cloud {
+  aspect-ratio: 3 / 2;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cloud-back {
+  left: 46%;
+  bottom: 21%;
+  width: 48%;
+  background-image: url(/RSVP_invitation_for_kids/src/assets/invitation_animation/medium-cloude.png);
+  /* transform: scaleX(-1); */
+  z-index: 3;
+}
+
+.cloud-front {
+  left: 21%;
+  bottom: 6%;
+  width: 32%;
+  background-image: url(/RSVP_invitation_for_kids/src/assets/invitation_animation/small-cloud.png);
+  z-index: 4;
+}
+
+.cloud-front.left {
+  left: 48%;
+  bottom: 3%;
+  width: 36%;
+  background-image: url(/RSVP_invitation_for_kids/src/assets/invitation_animation/medium-cloude.png);
+  z-index: 4;
+  transform: scaleX(-1);
+}
+
+@media (min-width: 420px) {
+  .rainbow {
+    aspect-ratio: 6 / 2.6;
+    width: 127%;
+    left: -9%;
+    bottom: 27%;
+  }
+
+  .castle {
+    width: 57%;
+    left: -12%;
+  }
+}

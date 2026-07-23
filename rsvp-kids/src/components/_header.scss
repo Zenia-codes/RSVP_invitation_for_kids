@@ -1,6 +1,12 @@
-.header {
-  position: relative;
-  background: url("../assets/invitation1_title.png") no-repeat top center;
-  background-size: cover;
-  aspect-ratio: 6 / 5;
+.changeLanguage {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  justify-content: end;
+
+  .lang-btn {
+    min-width: 40px;
+    height: 35px;
+    font-size: 13px;
+  }
 }

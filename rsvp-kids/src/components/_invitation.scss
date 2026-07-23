@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 8px;
-  padding-bottom: 22px;
+  padding-bottom: 15px;
 
   .title {
     display: flex;
@@ -52,7 +52,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
   padding-bottom: 20px;
 
   .info {
