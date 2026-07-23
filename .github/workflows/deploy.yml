@@ -32,7 +32,11 @@ jobs:
           cache-dependency-path: rsvp-kids/package-lock.json
 
       - run: npm ci
-      - run: npm run build
+
+      - name: Build project
+        run: npm run build
+        env:
+          VITE_WEB3FORMS_KEY: ${{ secrets.VITE_WEB3FORMS_KEY }}
 
       - uses: actions/upload-pages-artifact@v3
         with:
