@@ -40,100 +40,86 @@ const gifts = [
     title: t("giftTips.artsAndCrafts"),
     image: artsAndCrafts,
   },
-
   {
     title: t("giftTips.sensoryPlay"),
     image: sensoryPlay,
   },
-
   {
     title: t("giftTips.booksAndColoring"),
     image: booksAndColoring,
   },
-
   {
     title: t("giftTips.clothes"),
     image: clothes,
   },
-
   {
     title: t("giftTips.accessories"),
     image: accessories,
   },
-
   {
     title: t("giftTips.music"),
     image: music,
   },
-
   {
     title: t("giftTips.kitchen"),
     image: kitchen,
   },
-
   {
     title: t("giftTips.police"),
     image: police,
   },
-
   {
     title: t("giftTips.doctor"),
     image: doctor,
   },
-
   {
     title: t("giftTips.building"),
     image: building,
   },
-
   {
     title: t("giftTips.minecraftMagnetTiles"),
     image: minecraftMagnetTiles,
   },
-
   {
     title: t("giftTips.magneticTiles"),
     image: magneticTiles,
   },
-
   {
     title: t("giftTips.lego"),
     image: lego,
   },
-
   {
     title: t("giftTips.favoriteShows"),
     image: favoriteShows,
   },
-
   {
     title: t("giftTips.astrobot"),
     image: astrobot,
   },
 ];
 
-let currentGift = 0; // Který tip se právě zobrazuje (0, tedy první objekt v poli)
-let interval;
+let currentGift = 0;
+let interval = null;
 
-// Zobrazí aktuální dárek
+// zobrazí aktuální tip
 function showGift(index) {
   giftTitle.textContent = gifts[index].title;
   giftImage.src = gifts[index].image;
   giftImage.alt = gifts[index].title;
 }
 
-// Posune slider dál
+// další tip
 function nextGiftSlide() {
   currentGift++;
 
   if (currentGift >= gifts.length) {
-    currentGift = 0; // Jak dosáhne konce seznamu, vrátí se funkce na začátek. Tak vzniká nekonečné přepínání.
+    currentGift = 0;
   }
 
-  showGift(currentGift); //zobrazí aktuální tip
+  showGift(currentGift);
 }
 
-// Posune slider zpět
+// předchozí tip
 function previousGiftSlide() {
   currentGift--;
 
@@ -144,41 +130,46 @@ function previousGiftSlide() {
   showGift(currentGift);
 }
 
-previousGift.addEventListener("click", function () {
-  previousGiftSlide();
-});
-
-showGiftTips.addEventListener("click", function () {
-  giftCard.classList.toggle("hidden"); // Pokud hidden existuje → smaže se, neexistuje → přidá se
-
-  if (giftCard.classList.contains("hidden")) {
-    showGiftTips.textContent = "zobrazit tip";
-
-    clearInterval(interval);
-  } else {
-    showGiftTips.textContent = "skrýt tip";
-
-    showGift(currentGift);
-    clearInterval(interval);
-    interval = setInterval(nextGiftSlide, 7000);
-  }
-});
-
-nextGift.addEventListener("click", function () {
-  nextGiftSlide();
-});
-
-//reset automatického přepínání po kliknutí
-function restartSlider() {
+// automatické přepínání
+function startSlider() {
   clearInterval(interval);
   interval = setInterval(nextGiftSlide, 7000);
 }
 
+// zastavení slideru
+function stopSlider() {
+  clearInterval(interval);
+  interval = null;
+}
+
+// restart po ručním kliknutí
+function restartSlider() {
+  stopSlider();
+  startSlider();
+}
+
+// zobrazit / skrýt tipy
+showGiftTips.addEventListener("click", () => {
+  giftCard.classList.toggle("hidden");
+
+  if (giftCard.classList.contains("hidden")) {
+    showGiftTips.textContent = "zobrazit tip";
+    stopSlider();
+  } else {
+    showGiftTips.textContent = "skrýt tip";
+
+    showGift(currentGift);
+    startSlider();
+  }
+});
+
+// další dárek
 nextGift.addEventListener("click", () => {
   nextGiftSlide();
   restartSlider();
 });
 
+// předchozí dárek
 previousGift.addEventListener("click", () => {
   previousGiftSlide();
   restartSlider();
