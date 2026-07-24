@@ -11,14 +11,20 @@
 @use "./components/buttons" as b;
 @use "./components/invitation";
 @use "./components/hero";
+@use "./components/confetti";
 
 * {
   box-sizing: border-box;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 1080px;
   margin: 0 auto;
+}
+
+section,
+form,
+footer {
   padding-inline: 25px;
 }
 
@@ -144,40 +150,6 @@ body {
   padding: 10px;
   &.hidden {
     display: none;
-  }
-}
-
-// konfety po potvrzení formuláře
-.confetti-container {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 9999;
-}
-
-.confetti {
-  position: absolute;
-  display: block;
-  top: -20px;
-  width: 12px;
-  height: 18px;
-  opacity: 1;
-  animation: fall 3s linear forwards;
-}
-
-// animace konfet
-@keyframes fall {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translate(var(--drift), 110vh) rotate(720deg);
-    opacity: 0;
   }
 }
 
