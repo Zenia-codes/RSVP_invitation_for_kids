@@ -29,45 +29,48 @@
       </div>
     </header>
     <!-- hero -->
-    <section class="hero container">
-      <div class="scene">
-        <div class="rainbow"></div>
+    <div class="layout">
+      <section class="hero container">
+        <div class="scene">
+          <div class="rainbow"></div>
 
-        <div class="castle"></div>
+          <div class="castle"></div>
 
-        <div class="girl">
-          <img src="./src/assets/invitation_animation/Sofie.png" alt="girl" />
+          <div class="girl">
+            <img src="./src/assets/invitation_animation/Sofie.png" alt="girl" />
+          </div>
+
+          <div class="cloud cloud-back"></div>
+          <div class="cloud cloud-front"></div>
+          <div class="cloud cloud-front left"></div>
         </div>
+      </section>
+      <!-- invitation text -->
+      <section class="invitation container">
+        <div class="title">
+          <h2 data-i18n="invitation.title.inv"></h2>
+          <h1 class="child" data-i18n="invitation.title.name"></h1>
+          <span class="birthday" data-i18n="invitation.title.year"></span>
+        </div>
+        <div class="subtitle">
+          <p class="placeText" data-i18n="invitation.subtitle.event"></p>
+          <span class="dateTime" data-i18n="invitation.subtitle.time"></span>
+          <span class="playroom" data-i18n="invitation.subtitle.place"></span>
+          <p class="adress" data-i18n="invitation.subtitle.address"></p>
+        </div>
+      </section>
+      <!-- info form -->
+      <section class="wrapper_info container">
+        <p class="info" data-i18n="invitation.info" data-html></p>
+        <a href="#next" class="scroll-down" aria-label="Scroll down">
+          <svg viewBox="0 0 40 40" class="scroll-icon">
+            <circle cx="20" cy="20" r="18" />
+            <polyline points="12,17 20,25 28,17" />
+          </svg>
+        </a>
+      </section>
+    </div>
 
-        <div class="cloud cloud-back"></div>
-        <div class="cloud cloud-front"></div>
-        <div class="cloud cloud-front left"></div>
-      </div>
-    </section>
-    <!-- invitation text -->
-    <section class="invitation container">
-      <div class="title">
-        <h2 data-i18n="invitation.title.inv"></h2>
-        <h1 class="child" data-i18n="invitation.title.name"></h1>
-        <span class="birthday" data-i18n="invitation.title.year"></span>
-      </div>
-      <div class="subtitle">
-        <p class="placeText" data-i18n="invitation.subtitle.event"></p>
-        <span class="dateTime" data-i18n="invitation.subtitle.time"></span>
-        <span class="playroom" data-i18n="invitation.subtitle.place"></span>
-        <p class="adress" data-i18n="invitation.subtitle.address"></p>
-      </div>
-    </section>
-    <!-- info form -->
-    <section class="wrapper_info container">
-      <p class="info" data-i18n="invitation.info" data-html></p>
-      <a href="#next" class="scroll-down" aria-label="Scroll down">
-        <svg viewBox="0 0 40 40" class="scroll-icon">
-          <circle cx="20" cy="20" r="18" />
-          <polyline points="12,17 20,25 28,17" />
-        </svg>
-      </a>
-    </section>
     <!-- form -->
     <form class="form container" novalidate id="contactForm">
       <p class="form_label" data-i18n="form.fullName"></p>
@@ -207,7 +210,7 @@
       </div>
     </form>
 
-    <section class="gift-section container">
+    <section class="gift-section">
       <p class="form_label" data-i18n="form.giftIns"></p>
 
       <button

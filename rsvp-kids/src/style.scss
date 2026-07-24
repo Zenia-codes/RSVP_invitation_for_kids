@@ -17,6 +17,10 @@
   box-sizing: border-box;
 }
 
+.layout {
+  min-height: 80vh;
+}
+
 .container {
   max-width: 1080px;
   margin: 0 auto;
@@ -154,10 +158,27 @@ body {
   }
 }
 
-@media (min-width: 780px) {
+@media (min-width: 480px) {
   .layout {
-    display: grid;
-    min-height: 100vh;
+    min-height: 82vh;
     grid-template-rows: auto 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .layout {
+    min-height: 84vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .layout {
+    min-height: 85vh;
+  }
+}
+
+@media (min-width: 1800px) {
+  .layout {
+    min-height: 88vh;
   }
 }

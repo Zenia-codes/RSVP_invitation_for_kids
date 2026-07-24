@@ -52,16 +52,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 40px;
 
   .info {
     text-align: center;
     font-size: 10px;
+    max-width: 45ch;
   }
 }
 
 @media (min-width: 680px) {
   .invitation {
     padding-block: 15px;
+  }
+
+  .wrapper_info {
+    .info {
+      max-width: 65ch;
+    }
   }
 }
