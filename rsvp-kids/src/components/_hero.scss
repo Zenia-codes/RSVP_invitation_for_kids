@@ -1,13 +1,18 @@
 .hero {
-  position: relative;
-  aspect-ratio: 6 / 4.35;
-  height: clamp(210px, 36vw, 335px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
 }
 
 .scene {
   position: relative;
-  width: 100%;
-  height: 100%;
+  isolation: isolate;
+  width: min(100%, 320px);
+  aspect-ratio: 31 / 22;
+  //   width: 310px;
+  //   min-height: 220px;
 }
 
 .scene > * {
@@ -18,69 +23,52 @@
 }
 
 .rainbow {
-  left: 50%;
-  top: clamp(12px, 3vw, 24px);
-  transform: translateX(-50%);
-
-  width: 110%;
+  width: 100%;
   aspect-ratio: 2 / 1.1;
-
   background-image: url("../assets/invitation_animation/rainbow.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top center;
   z-index: 1;
 }
 
 .castle {
-  width: 53%;
+  width: 180px;
   aspect-ratio: 1;
-  left: -14%;
-  bottom: 12%;
-  background-image: url(../assets/invitation_animation/castle.png);
+  left: -17px;
+  background-image: url(../assets/invitation_animation/castle2.png);
   z-index: 2;
 }
 
 .girl {
-  left: 47%;
-  bottom: 8%;
-  transform: translateX(-48%);
+  width: 167px;
+  top: 18px;
+  left: 61px;
+  aspect-ratio: 1;
+  background-image: url(../assets/invitation_animation/Sofie.png);
   z-index: 4;
-
-  img {
-    width: 90%;
-  }
-}
-
-.cloud {
-  aspect-ratio: 3 / 2;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
 }
 
 .cloud-back {
-  left: 54%;
-  bottom: 11%;
-  width: 39%;
+  left: 145px;
+  top: 105px;
+  width: 130px;
+  aspect-ratio: 2 / 1;
   background-image: url(../assets/invitation_animation/medium-cloude.png);
-  /* transform: scaleX(-1); */
   z-index: 3;
 }
 
-.cloud-front {
-  left: 15%;
-  bottom: -3%;
-  width: 31%;
+.cloud-right {
+  left: 142px;
+  top: 154px;
+  width: 105px;
+  aspect-ratio: 2 / 1;
   background-image: url(../assets/invitation_animation/small-cloud.png);
   z-index: 4;
 }
 
-.cloud-front.left {
-  left: 42%;
-  bottom: -15px;
-  width: 39%;
+.cloud-left {
+  left: 50px;
+  top: 160px;
+  width: 113px;
+  aspect-ratio: 2 / 1;
   background-image: url(../assets/invitation_animation/medium-cloude.png);
   z-index: 4;
-  transform: scaleX(-1);
 }

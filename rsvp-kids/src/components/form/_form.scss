@@ -2,10 +2,9 @@
 @use "../../styles/variables/colors" as c;
 
 .form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 11px;
-  padding-top: 80px;
+  // padding: 25px;
 
   .form_label {
     font-weight: 700;
@@ -93,13 +92,5 @@
       padding: 5px;
       opacity: 1;
     }
-  }
-}
-
-@media (min-width: 800px) {
-  .form {
-    display: grid;
-    grid-template-columns: max-content;
-    justify-content: center;
   }
 }

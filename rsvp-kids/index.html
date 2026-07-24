@@ -22,231 +22,202 @@
   </head>
   <body class="notranslate">
     <!-- header -->
-    <header class="header container">
-      <div class="changeLanguage">
-        <button class="lang-btn" data-lang="cs">CZ</button>
-        <button class="lang-btn" data-lang="en">EN</button>
+    <header class="header">
+      <div class="header_container container">
+        <div class="changeLanguage">
+          <button class="lang-btn" data-lang="cs">CZ</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
       </div>
     </header>
     <!-- hero -->
-    <div class="layout">
-      <section class="hero container">
+    <main class="layout container">
+      <section class="hero">
         <div class="scene">
           <div class="rainbow"></div>
-
           <div class="castle"></div>
-
-          <div class="girl">
-            <img src="./src/assets/invitation_animation/Sofie.png" alt="girl" />
-          </div>
-
+          <div class="girl"></div>
           <div class="cloud cloud-back"></div>
-          <div class="cloud cloud-front"></div>
-          <div class="cloud cloud-front left"></div>
+          <div class="cloud cloud-right"></div>
+          <div class="cloud cloud-left"></div>
         </div>
-      </section>
-      <!-- invitation text -->
-      <section class="invitation container">
-        <div class="title">
-          <h2 data-i18n="invitation.title.inv"></h2>
-          <h1 class="child" data-i18n="invitation.title.name"></h1>
-          <span class="birthday" data-i18n="invitation.title.year"></span>
-        </div>
-        <div class="subtitle">
-          <p class="placeText" data-i18n="invitation.subtitle.event"></p>
-          <span class="dateTime" data-i18n="invitation.subtitle.time"></span>
-          <span class="playroom" data-i18n="invitation.subtitle.place"></span>
-          <p class="adress" data-i18n="invitation.subtitle.address"></p>
-        </div>
-      </section>
-      <!-- info form -->
-      <section class="wrapper_info container">
-        <p class="info" data-i18n="invitation.info" data-html></p>
-        <a href="#next" class="scroll-down" aria-label="Scroll down">
-          <svg viewBox="0 0 40 40" class="scroll-icon">
-            <circle cx="20" cy="20" r="18" />
-            <polyline points="12,17 20,25 28,17" />
-          </svg>
-        </a>
-      </section>
-    </div>
-
-    <!-- form -->
-    <form class="form container" novalidate id="contactForm">
-      <p class="form_label" data-i18n="form.fullName"></p>
-      <label for="name" class="sr-only">first Name</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="First Name"
-        data-i18n-placeholder="form.firstName"
-        required
-      />
-
-      <label for="surname" class="sr-only">Last Name</label>
-      <input
-        type="text"
-        id="surname"
-        name="surname"
-        placeholder="Last Name"
-        data-i18n-placeholder="form.lastName"
-        required
-      />
-
-      <label for="email" class="sr-only">E-mail</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="E-mail"
-        required
-      />
-      <div class="attendance">
-        <p class="form_label" data-i18n="form.invite"></p>
-        <label>
-          <input type="radio" name="attendance" value="yes" />
-          <p data-i18n="form.yes">I will attend</p>
-        </label>
-
-        <label>
-          <input type="radio" name="attendance" value="no" />
-          <p data-i18n="form.no">I can't come</p>
-        </label>
-      </div>
-
-      <div class="numberOfPeople">
-        <p class="form_label" data-i18n="form.howManyPeople"></p>
-        <div class="wrapper_adultsKids">
-          <div class="adults_kids">
-            <label for="numberOfAdults" data-i18n="form.adults">Adults</label>
-            <input type="number" id="numberOfAdults" name="Adults" required />
+        <!-- invitation text -->
+        <div class="invitation">
+          <div class="title">
+            <h2 data-i18n="invitation.title.inv"></h2>
+            <h1 class="child" data-i18n="invitation.title.name"></h1>
+            <span class="birthday" data-i18n="invitation.title.year"></span>
           </div>
-
-          <div class="adults_kids">
-            <label for="numberOfKids" data-i18n="form.children">Children</label>
-            <input type="number" id="numberOfKids" name="Kids" required />
+          <div class="subtitle">
+            <p class="placeText" data-i18n="invitation.subtitle.event"></p>
+            <span class="dateTime" data-i18n="invitation.subtitle.time"></span>
+            <span class="playroom" data-i18n="invitation.subtitle.place"></span>
+            <p class="adress" data-i18n="invitation.subtitle.address"></p>
           </div>
         </div>
-      </div>
-
-      <details class="messageForHost">
-        <summary data-i18n="form.message"></summary>
-
-        <textarea
-          id="message"
-          name="message"
-          rows="4"
-          placeholder="For example: I’ll arrive later..."
-          data-i18n-placeholder="form.textPlaceholder"
-        ></textarea>
-      </details>
-
-      <!-- <div class="food">
-        <p class="form_label">What would make you happy at the party?</p>
-
-        <button type="button" id="showOffer">show offer</button>
-
-        <div class="foodSection hidden" id="foodSection">
-          <label>
-            <input type="checkbox" name="food" value="pizza" />
-            Pizza 🍕
-          </label>
-
-          <label>
-            <input type="checkbox" name="food" value="fruit" />
-            Fruit platter 🥗
-          </label>
-
-          <label>
-            <input type="checkbox" name="food" value="cake" />
-            Extra dessert 🧁
-          </label>
-
-          <label>
-            <input type="checkbox" name="food" value="nanuk" />
-            Popsicles 🍡
-          </label>
-
-          <label>
-            <input type="checkbox" name="food" value="gril" />
-            Grilled goodies 🥩
-          </label>
-
-          <label>
-            <input type="checkbox" name="food" value="gril" />
-            entertainment program for kids 🎈
-          </label>
-
-          <label>
-            <input type="checkbox" name="food" value="gril" />
-            Something others?
-          </label>
+        <!-- info form -->
+        <div class="wrapper_info">
+          <p class="info" data-i18n="invitation.info" data-html></p>
+          <a href="#next" class="scroll-down" aria-label="Scroll down">
+            <svg viewBox="0 0 40 40" class="scroll-icon">
+              <circle cx="20" cy="20" r="18" />
+              <polyline points="12,17 20,25 28,17" />
+            </svg>
+          </a>
         </div>
-      </div> -->
-      <div class="submit">
-        <div class="wrapper_agree">
-          <label class="agree">
-            <input type="checkbox" id="agree" name="consent" value="Agreed" />
-            <p data-i18n="form.agree">
-              *I agree to the processing of personal data.
-            </p>
-          </label>
-        </div>
+      </section>
 
-        <button
-          id="submitBtn"
-          type="submit"
-          class="form_label btn--large"
-          data-i18n="form.buttonSubmit"
-        >
-          Submit
-        </button>
+      <aside class="sidebar">
+        <!-- form -->
+        <form class="form" novalidate id="contactForm">
+          <p class="form_label" data-i18n="form.fullName"></p>
+          <label for="name" class="sr-only">first Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="First Name"
+            data-i18n-placeholder="form.firstName"
+            required
+          />
 
-        <div id="formMessages">
-          <p id="errorMessage" class="hidden"></p>
-          <p id="successMessage" class="hidden"></p>
-        </div>
-      </div>
-    </form>
+          <label for="surname" class="sr-only">Last Name</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            placeholder="Last Name"
+            data-i18n-placeholder="form.lastName"
+            required
+          />
 
-    <section class="gift-section">
-      <p class="form_label" data-i18n="form.giftIns"></p>
+          <label for="email" class="sr-only">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="E-mail"
+            required
+          />
+          <div class="attendance">
+            <p class="form_label" data-i18n="form.invite"></p>
+            <label>
+              <input type="radio" name="attendance" value="yes" />
+              <p data-i18n="form.yes">I will attend</p>
+            </label>
 
-      <button
-        type="button"
-        class="btn--medium"
-        id="showGiftTips"
-        data-i18n="form.giftShow"
-      >
-        Show tips
-      </button>
+            <label>
+              <input type="radio" name="attendance" value="no" />
+              <p data-i18n="form.no">I can't come</p>
+            </label>
+          </div>
 
-      <div class="gift-card hidden" id="giftCard">
-        <h3 class="giftTitle" id="giftTitle"></h3>
-        <img id="giftImage" src="" alt="" />
+          <div class="numberOfPeople">
+            <p class="form_label" data-i18n="form.howManyPeople"></p>
+            <div class="wrapper_adultsKids">
+              <div class="adults_kids">
+                <label for="numberOfAdults" data-i18n="form.adults"
+                  >Adults</label
+                >
+                <input
+                  type="number"
+                  id="numberOfAdults"
+                  name="Adults"
+                  required
+                />
+              </div>
 
-        <div class="buttons_tip">
-          <button
-            type="button"
-            class="btn--small"
-            id="previousGift"
-            data-i18n="form.giftPrevious"
-          >
-            previous tip
-          </button>
+              <div class="adults_kids">
+                <label for="numberOfKids" data-i18n="form.children"
+                  >Children</label
+                >
+                <input type="number" id="numberOfKids" name="Kids" required />
+              </div>
+            </div>
+          </div>
+
+          <details class="messageForHost">
+            <summary data-i18n="form.message"></summary>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="For example: I’ll arrive later..."
+              data-i18n-placeholder="form.textPlaceholder"
+            ></textarea>
+          </details>
+
+          <div class="submit">
+            <div class="wrapper_agree">
+              <label class="agree">
+                <input
+                  type="checkbox"
+                  id="agree"
+                  name="consent"
+                  value="Agreed"
+                />
+                <p data-i18n="form.agree">
+                  *I agree to the processing of personal data.
+                </p>
+              </label>
+            </div>
+
+            <button
+              id="submitBtn"
+              type="submit"
+              class="form_label btn--large"
+              data-i18n="form.buttonSubmit"
+            >
+              Submit
+            </button>
+
+            <div id="formMessages">
+              <p id="errorMessage" class="hidden"></p>
+              <p id="successMessage" class="hidden"></p>
+            </div>
+          </div>
+        </form>
+
+        <section class="gift-section">
+          <p class="form_label" data-i18n="form.giftIns"></p>
 
           <button
             type="button"
-            class="btn--small"
-            id="nextGift"
-            data-i18n="form.giftNext"
+            class="btn--medium"
+            id="showGiftTips"
+            data-i18n="form.giftShow"
           >
-            Next tip
+            Show tips
           </button>
-        </div>
-      </div>
-    </section>
+
+          <div class="gift-card hidden" id="giftCard">
+            <h3 class="giftTitle" id="giftTitle"></h3>
+            <img id="giftImage" src="" alt="" />
+
+            <div class="buttons_tip">
+              <button
+                type="button"
+                class="btn--small"
+                id="previousGift"
+                data-i18n="form.giftPrevious"
+              >
+                previous tip
+              </button>
+
+              <button
+                type="button"
+                class="btn--small"
+                id="nextGift"
+                data-i18n="form.giftNext"
+              >
+                Next tip
+              </button>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </main>
 
     <footer class="footer">
       <ul class="socials_list">

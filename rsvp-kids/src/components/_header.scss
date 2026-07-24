@@ -1,18 +1,23 @@
 .header {
-  position: fixed;
-  z-index: 999;
-  display: flex;
+  position: sticky;
+  height: 40px;
+  top: 0;
   width: 100%;
-  justify-content: flex-end;
-  padding-inline: 10px;
+  z-index: 100;
+}
+
+.header_container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 .changeLanguage {
   display: flex;
-  flex-direction: column;
+  z-index: 999;
+
   gap: 6px;
-  padding-top: 10px;
-  justify-content: end;
 
   .lang-btn {
     min-width: 35px;
@@ -21,15 +26,22 @@
   }
 }
 
-@media (min-width: 420px) {
-  .changeLanguage {
-    flex-direction: row;
-    gap: 10px;
-    padding-top: 15px;
-    .lang-btn {
-      min-width: 40px;
-      height: 35px;
-      font-size: 13px;
-    }
+@media (min-width: 900px) {
+  .header {
+    height: 60px;
   }
 }
+
+// @media (min-width: 420px) {
+//   .header {
+//     height: 50px;
+//   }
+//   .changeLanguage {
+//     gap: 10px;
+//     .lang-btn {
+//       min-width: 40px;
+//       height: 35px;
+//       font-size: 13px;
+//     }
+//   }
+// }

@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 8px;
-  padding-block: 25px 35px;
 
   .title {
     display: flex;
@@ -56,18 +55,12 @@
   .info {
     text-align: center;
     font-size: 10px;
-    max-width: 45ch;
+    max-width: 39ch;
   }
 }
 
-@media (min-width: 680px) {
-  .invitation {
-    padding-block: 15px;
-  }
-
+@media (min-width: 650px) {
   .wrapper_info {
-    .info {
-      max-width: 65ch;
-    }
+    display: none;
   }
 }

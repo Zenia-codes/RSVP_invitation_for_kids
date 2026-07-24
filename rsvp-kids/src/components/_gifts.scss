@@ -7,7 +7,7 @@
   align-items: center;
   padding-block: 50px;
   gap: 10px;
-  background-color: rgba(255, 209, 247, 0.3);
+  // background-color: rgba(255, 209, 247, 0.3);
   border-top: 2px dotted rgba(128, 128, 128, 0.811);
   .form_label {
     font-weight: 800;
@@ -33,5 +33,12 @@
     border: 2px solid white;
     border-radius: 8px;
     filter: drop-shadow(2px 1px 1px rgba(128, 128, 128, 0.86));
+  }
+}
+
+@media (min-width: 900px) {
+  .gift-section {
+    flex-direction: row;
+    padding-block: 10px;
   }
 }
