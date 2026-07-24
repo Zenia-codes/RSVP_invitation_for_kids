@@ -95,11 +95,10 @@
   }
 }
 
-// .food {
-//   display: flex;
-//   flex-direction: column;
-
-//   &.hidden {
-//     display: none;
-//   }
-// }
+@media (min-width: 800px) {
+  .form {
+    display: grid;
+    grid-template-columns: max-content;
+    justify-content: center;
+  }
+}
