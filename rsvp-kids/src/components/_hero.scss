@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
-  gap: 10px;
+  gap: 5px;
 }
 
 .scene {
@@ -23,7 +22,7 @@
 }
 
 .rainbow {
-  width: 100%;
+  width: 98%;
   aspect-ratio: 2 / 1.1;
   background-image: url("../assets/invitation_animation/rainbow.png");
   z-index: 1;
@@ -71,4 +70,145 @@
   aspect-ratio: 2 / 1;
   background-image: url(../assets/invitation_animation/medium-cloude.png);
   z-index: 4;
+}
+
+// animation
+.rainbow,
+.castle {
+  opacity: 0;
+  transform: scale(0.85);
+
+  animation: appearScene 0.8s ease-out forwards,
+    gentleFloat 5s ease-in-out infinite;
+
+  animation-delay: 0s, 2.5s;
+}
+
+@keyframes appearScene {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gentleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.cloud-back {
+  opacity: 0;
+  transform: translateX(100px);
+
+  animation: cloudIn 0.9s ease-out forwards, cloudMove 7s ease-in-out infinite;
+
+  animation-delay: 0.3s, 2.5s;
+}
+
+.cloud-right {
+  opacity: 0;
+  transform: translateX(120px);
+
+  animation: cloudInRight 0.8s ease-out forwards,
+    cloudMoveRight 6s ease-in-out infinite;
+
+  animation-delay: 0.5s, 2.5s;
+}
+
+.cloud-left {
+  opacity: 0;
+  transform: translateX(-120px);
+
+  animation: cloudInLeft 0.9s ease-out forwards,
+    cloudMoveLeft 8s ease-in-out infinite;
+
+  animation-delay: 0.7s, 2.5s;
+}
+
+@keyframes cloudIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cloudInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cloudInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cloudMove {
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes cloudMoveRight {
+  50% {
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes cloudMoveLeft {
+  50% {
+    transform: translateX(12px);
+  }
+}
+
+.girl {
+  opacity: 0;
+  transform: translateY(120px);
+
+  animation: girlEnter 0.8s cubic-bezier(0.2, 1.4, 0.4, 1) forwards,
+    girlIdle 3.5s ease-in-out infinite;
+
+  animation-delay: 1.6s, 2.5s;
+}
+
+@keyframes girlEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes girlIdle {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(1deg);
+  }
 }

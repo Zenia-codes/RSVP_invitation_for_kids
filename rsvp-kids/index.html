@@ -67,119 +67,107 @@
         </div>
       </section>
 
-      <aside class="sidebar">
-        <!-- form -->
-        <form class="form" novalidate id="contactForm">
-          <p class="form_label" data-i18n="form.fullName"></p>
-          <label for="name" class="sr-only">first Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="First Name"
-            data-i18n-placeholder="form.firstName"
-            required
-          />
+      <!-- form -->
+      <form class="form" novalidate id="contactForm">
+        <p class="form_label" data-i18n="form.fullName"></p>
+        <label for="name" class="sr-only">first Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="First Name"
+          data-i18n-placeholder="form.firstName"
+          required
+        />
 
-          <label for="surname" class="sr-only">Last Name</label>
-          <input
-            type="text"
-            id="surname"
-            name="surname"
-            placeholder="Last Name"
-            data-i18n-placeholder="form.lastName"
-            required
-          />
+        <label for="surname" class="sr-only">Last Name</label>
+        <input
+          type="text"
+          id="surname"
+          name="surname"
+          placeholder="Last Name"
+          data-i18n-placeholder="form.lastName"
+          required
+        />
 
-          <label for="email" class="sr-only">E-mail</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="E-mail"
-            required
-          />
-          <div class="attendance">
-            <p class="form_label" data-i18n="form.invite"></p>
-            <label>
-              <input type="radio" name="attendance" value="yes" />
-              <p data-i18n="form.yes">I will attend</p>
+        <label for="email" class="sr-only">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="E-mail"
+          required
+        />
+        <div class="attendance">
+          <p class="form_label" data-i18n="form.invite"></p>
+          <label>
+            <input type="radio" name="attendance" value="yes" />
+            <p data-i18n="form.yes">I will attend</p>
+          </label>
+
+          <label>
+            <input type="radio" name="attendance" value="no" />
+            <p data-i18n="form.no">I can't come</p>
+          </label>
+        </div>
+
+        <div class="numberOfPeople">
+          <p class="form_label" data-i18n="form.howManyPeople"></p>
+          <div class="wrapper_adultsKids">
+            <div class="adults_kids">
+              <label for="numberOfAdults" data-i18n="form.adults">Adults</label>
+              <input type="number" id="numberOfAdults" name="Adults" required />
+            </div>
+
+            <div class="adults_kids">
+              <label for="numberOfKids" data-i18n="form.children"
+                >Children</label
+              >
+              <input type="number" id="numberOfKids" name="Kids" required />
+            </div>
+          </div>
+        </div>
+
+        <details class="messageForHost">
+          <summary data-i18n="form.message"></summary>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="For example: I’ll arrive later..."
+            data-i18n-placeholder="form.textPlaceholder"
+          ></textarea>
+        </details>
+
+        <div class="submit">
+          <div class="wrapper_agree">
+            <label class="agree">
+              <input type="checkbox" id="agree" name="consent" value="Agreed" />
+              <p data-i18n="form.agree">
+                *I agree to the processing of personal data.
+              </p>
             </label>
-
-            <label>
-              <input type="radio" name="attendance" value="no" />
-              <p data-i18n="form.no">I can't come</p>
-            </label>
           </div>
 
-          <div class="numberOfPeople">
-            <p class="form_label" data-i18n="form.howManyPeople"></p>
-            <div class="wrapper_adultsKids">
-              <div class="adults_kids">
-                <label for="numberOfAdults" data-i18n="form.adults"
-                  >Adults</label
-                >
-                <input
-                  type="number"
-                  id="numberOfAdults"
-                  name="Adults"
-                  required
-                />
-              </div>
+          <button
+            id="submitBtn"
+            type="submit"
+            class="form_label btn--large"
+            data-i18n="form.buttonSubmit"
+          >
+            Submit
+          </button>
 
-              <div class="adults_kids">
-                <label for="numberOfKids" data-i18n="form.children"
-                  >Children</label
-                >
-                <input type="number" id="numberOfKids" name="Kids" required />
-              </div>
-            </div>
+          <div id="formMessages">
+            <p id="errorMessage" class="hidden"></p>
+            <p id="successMessage" class="hidden"></p>
           </div>
+        </div>
+      </form>
 
-          <details class="messageForHost">
-            <summary data-i18n="form.message"></summary>
-
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              placeholder="For example: I’ll arrive later..."
-              data-i18n-placeholder="form.textPlaceholder"
-            ></textarea>
-          </details>
-
-          <div class="submit">
-            <div class="wrapper_agree">
-              <label class="agree">
-                <input
-                  type="checkbox"
-                  id="agree"
-                  name="consent"
-                  value="Agreed"
-                />
-                <p data-i18n="form.agree">
-                  *I agree to the processing of personal data.
-                </p>
-              </label>
-            </div>
-
-            <button
-              id="submitBtn"
-              type="submit"
-              class="form_label btn--large"
-              data-i18n="form.buttonSubmit"
-            >
-              Submit
-            </button>
-
-            <div id="formMessages">
-              <p id="errorMessage" class="hidden"></p>
-              <p id="successMessage" class="hidden"></p>
-            </div>
-          </div>
-        </form>
-
-        <section class="gift-section">
+      <section class="gift-section">
+        <div class="wrapper_form-label">
           <p class="form_label" data-i18n="form.giftIns"></p>
 
           <button
@@ -190,33 +178,33 @@
           >
             Show tips
           </button>
+        </div>
 
-          <div class="gift-card hidden" id="giftCard">
-            <h3 class="giftTitle" id="giftTitle"></h3>
-            <img id="giftImage" src="" alt="" />
+        <div class="gift-card hidden" id="giftCard">
+          <h3 class="giftTitle" id="giftTitle"></h3>
+          <img id="giftImage" src="" alt="" />
 
-            <div class="buttons_tip">
-              <button
-                type="button"
-                class="btn--small"
-                id="previousGift"
-                data-i18n="form.giftPrevious"
-              >
-                previous tip
-              </button>
+          <div class="buttons_tip">
+            <button
+              type="button"
+              class="btn--small"
+              id="previousGift"
+              data-i18n="form.giftPrevious"
+            >
+              previous tip
+            </button>
 
-              <button
-                type="button"
-                class="btn--small"
-                id="nextGift"
-                data-i18n="form.giftNext"
-              >
-                Next tip
-              </button>
-            </div>
+            <button
+              type="button"
+              class="btn--small"
+              id="nextGift"
+              data-i18n="form.giftNext"
+            >
+              Next tip
+            </button>
           </div>
-        </section>
-      </aside>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
