@@ -25,6 +25,7 @@ import magneticTiles from "../../assets/gifts/magnetic-blocks.png";
 import lego from "../../assets/gifts/lego.png";
 import favoriteShows from "../../assets/gifts/fairytail.png";
 import astrobot from "../../assets/gifts/astrobot.png";
+import lyofio from "../../assets/gifts/lyofio.png";
 
 const showGiftTips = document.querySelector("#showGiftTips");
 const giftCard = document.querySelector("#giftCard");
@@ -95,6 +96,11 @@ const gifts = [
   {
     title: t("giftTips.astrobot"),
     image: astrobot,
+  },
+
+  {
+    title: t("giftTips.lyofio"),
+    image: lyofio,
   },
 ];
 
