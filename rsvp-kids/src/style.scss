@@ -142,7 +142,7 @@ strong {
 
 @media (min-width: 900px) {
   .layout {
-    grid-template-columns: auto 450px;
+    grid-template-columns: 1fr 1fr;
     align-items: start;
   }
 }

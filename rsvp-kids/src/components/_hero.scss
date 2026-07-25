@@ -5,6 +5,10 @@
   gap: 5px;
 }
 
+.hero > * {
+  min-width: 0;
+}
+
 .scene {
   position: relative;
   isolation: isolate;
@@ -111,7 +115,7 @@
   opacity: 0;
   transform: translateX(100px);
 
-  animation: cloudIn 0.9s ease-out forwards, cloudMove 7s ease-in-out infinite;
+  animation: cloud 0.9s ease-out forwards, cloudMove 7s ease-in-out infinite;
 
   animation-delay: 0.3s, 2.5s;
 }
@@ -120,7 +124,7 @@
   opacity: 0;
   transform: translateX(120px);
 
-  animation: cloudInRight 0.8s ease-out forwards,
+  animation: cloudRight 0.8s ease-out forwards,
     cloudMoveRight 6s ease-in-out infinite;
 
   animation-delay: 0.5s, 2.5s;
@@ -130,27 +134,27 @@
   opacity: 0;
   transform: translateX(-120px);
 
-  animation: cloudInLeft 0.9s ease-out forwards,
+  animation: cloudLeft 0.9s ease-out forwards,
     cloudMoveLeft 8s ease-in-out infinite;
 
   animation-delay: 0.7s, 2.5s;
 }
 
-@keyframes cloudIn {
+@keyframes cloud {
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-@keyframes cloudInRight {
+@keyframes cloudRight {
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-@keyframes cloudInLeft {
+@keyframes cloudLeft {
   to {
     opacity: 1;
     transform: translateX(0);
@@ -171,29 +175,36 @@
 
 @keyframes cloudMoveLeft {
   50% {
-    transform: translateX(12px);
+    transform: translateX(-12px);
   }
 }
 
 .girl {
   opacity: 0;
-  transform: translateY(120px);
+  transform: translateY(18px);
 
-  animation: girlEnter 0.8s cubic-bezier(0.2, 1.4, 0.4, 1) forwards,
-    girlIdle 3.5s ease-in-out infinite;
+  animation: girlEnter 0.9s cubic-bezier(0.22, 1.15, 0.36, 1) forwards,
+    girlIdle 3.2s ease-in-out infinite;
 
-  animation-delay: 1.6s, 2.5s;
+  animation-delay: 1.6s, 2.35s;
+
+  transform-origin: center bottom;
+  will-change: transform;
 }
 
 @keyframes girlEnter {
   0% {
     opacity: 0;
-    transform: translateY(120px);
+    transform: translateY(18px);
   }
 
-  70% {
+  55% {
     opacity: 1;
-    transform: translateY(-10px);
+    transform: translateY(-4px);
+  }
+
+  80% {
+    transform: translateY(1px);
   }
 
   100% {
@@ -203,12 +214,23 @@
 }
 
 @keyframes girlIdle {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-1deg);
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-2px) rotate(0.4deg);
   }
 
   50% {
-    transform: translateY(-6px) rotate(1deg);
+    transform: translateY(-4px) rotate(0.8deg);
+  }
+
+  75% {
+    transform: translateY(-2px) rotate(-0.3deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
   }
 }
