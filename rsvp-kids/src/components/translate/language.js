@@ -52,8 +52,6 @@ document.querySelectorAll(".lang-btn").forEach((button) => {
 });
 
 // načtení uloženého jazyka po otevření stránky
-const savedLanguage = localStorage.getItem("language");
+const savedLanguage = localStorage.getItem("language") || "cs";
 
-if (savedLanguage) {
-  changeLanguage(savedLanguage);
-}
+changeLanguage(savedLanguage);
