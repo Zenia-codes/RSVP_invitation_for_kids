@@ -18,9 +18,15 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 body {
   background: url("./assets/invitation2.png") repeat;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   &::before {
     content: "";

@@ -2,6 +2,7 @@
   position: fixed;
   height: 50px;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 100;
 }
@@ -15,7 +16,6 @@
 
 .changeLanguage {
   display: flex;
-  z-index: 999;
 
   gap: 6px;
 
