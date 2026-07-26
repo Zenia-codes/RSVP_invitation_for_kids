@@ -14,7 +14,6 @@
 .scene {
   position: relative;
   isolation: isolate;
-  //   width: min(100%, 320px);
   width: clamp(320px, 95vw, 400px);
   aspect-ratio: 31 / 20;
 }
@@ -27,7 +26,6 @@
 }
 
 .rainbow {
-  //   width: 320px;
   width: 100%;
   aspect-ratio: 2 / 1.1;
   background-image: url("../assets/invitation_animation/rainbow.png");
@@ -35,61 +33,81 @@
 }
 
 .castle {
-  width: 56.25%; // 180 / 320
+  width: 56.25%;
   left: -5.3%;
-  //   width: 180px;
   aspect-ratio: 1;
-  //   left: -17px;
   background-image: url(../assets/invitation_animation/castle2.png);
   z-index: 2;
 }
 
 .girl {
-  //   width: 167px;
-  //   top: 18px;
-  //   left: 61px;
-  width: 52.2%; // 167 / 320
-  left: 19.1%; // 61 / 320
-  top: 5.6%; // 18 / 320
+  width: 52.2%;
+  left: 19.1%;
+  top: 5.6%;
   aspect-ratio: 1;
   background-image: url(../assets/invitation_animation/Sofie.png);
   z-index: 4;
+
+  opacity: 0;
+  transform: translateY(18px);
+
+  animation: girlEnter 0.9s cubic-bezier(0.22, 1.15, 0.36, 1) forwards,
+    girlIdle 3.2s ease-in-out infinite;
+
+  animation-delay: 1.6s, 2.35s;
+
+  transform-origin: center bottom;
+  will-change: transform;
 }
 
 .cloud-back {
-  //   left: 145px;
-  //   top: 105px;
-  //   width: 130px;
-  left: 45.31%; // 145 / 320
-  top: 47.81%; // 105 / 320
-  width: 40.63%; // 130 / 320
+  left: 45.31%;
+  top: 47.81%;
+  width: 40.63%;
   aspect-ratio: 2 / 1;
   background-image: url(../assets/invitation_animation/medium-cloude.png);
   z-index: 3;
+
+  opacity: 0;
+  transform: translateX(100px);
+
+  animation: cloud 0.9s ease-out forwards, cloudMove 7s ease-in-out infinite;
+
+  animation-delay: 0.3s, 2.5s;
 }
 
 .cloud-right {
-  //   left: 142px;
-  //   top: 154px;
-  //   width: 105px;
-  left: 44.38%; // 142 / 320
-  top: 68.13%; // 154 / 320
-  width: 32.81%; // 105 / 320
+  left: 44.38%;
+  top: 68.13%;
+  width: 32.81%;
   aspect-ratio: 2 / 1;
   background-image: url(../assets/invitation_animation/small-cloud.png);
   z-index: 4;
+
+  opacity: 0;
+  transform: translateX(120px);
+
+  animation: cloudRight 0.8s ease-out forwards,
+    cloudMoveRight 6s ease-in-out infinite;
+
+  animation-delay: 0.5s, 2.5s;
 }
 
 .cloud-left {
-  //   left: 50px;
-  //   top: 160px;
-  //   width: 113px;
-  left: 15.63%; // 50 / 320
-  top: 70%; // 160 / 320
-  width: 35.31%; // 113 / 320
+  left: 15.63%;
+  top: 70%;
+  width: 35.31%;
   aspect-ratio: 2 / 1;
   background-image: url(../assets/invitation_animation/medium-cloude.png);
   z-index: 4;
+
+  opacity: 0;
+  transform: translateX(-120px);
+
+  animation: cloudLeft 0.9s ease-out forwards,
+    cloudMoveLeft 8s ease-in-out infinite;
+
+  animation-delay: 0.7s, 2.5s;
 }
 
 // animation
@@ -125,35 +143,6 @@
   50% {
     transform: translateY(-4px);
   }
-}
-
-.cloud-back {
-  opacity: 0;
-  transform: translateX(100px);
-
-  animation: cloud 0.9s ease-out forwards, cloudMove 7s ease-in-out infinite;
-
-  animation-delay: 0.3s, 2.5s;
-}
-
-.cloud-right {
-  opacity: 0;
-  transform: translateX(120px);
-
-  animation: cloudRight 0.8s ease-out forwards,
-    cloudMoveRight 6s ease-in-out infinite;
-
-  animation-delay: 0.5s, 2.5s;
-}
-
-.cloud-left {
-  opacity: 0;
-  transform: translateX(-120px);
-
-  animation: cloudLeft 0.9s ease-out forwards,
-    cloudMoveLeft 8s ease-in-out infinite;
-
-  animation-delay: 0.7s, 2.5s;
 }
 
 @keyframes cloud {
@@ -193,19 +182,6 @@
   50% {
     transform: translateX(-12px);
   }
-}
-
-.girl {
-  opacity: 0;
-  transform: translateY(18px);
-
-  animation: girlEnter 0.9s cubic-bezier(0.22, 1.15, 0.36, 1) forwards,
-    girlIdle 3.2s ease-in-out infinite;
-
-  animation-delay: 1.6s, 2.35s;
-
-  transform-origin: center bottom;
-  will-change: transform;
 }
 
 @keyframes girlEnter {
