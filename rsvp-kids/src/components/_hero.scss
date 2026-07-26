@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  height: 90vh;
+  min-height: 80dvh;
   padding-top: 30px;
+  gap: 10px;
 }
 
 .hero > * {
