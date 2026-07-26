@@ -4,7 +4,7 @@
 .form {
   display: grid;
   gap: 9px;
-  margin-inline: 25px;
+  padding: 50px 25px 0;
 
   .form_label {
     font-weight: 700;
@@ -92,5 +92,11 @@
       padding: 5px;
       opacity: 1;
     }
+  }
+}
+
+@media (min-width: 400px) {
+  .form {
+    padding: 50px 65px 0;
   }
 }
