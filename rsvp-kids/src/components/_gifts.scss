@@ -5,8 +5,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  padding-block: 30px;
-  // background-color: rgba(255, 209, 247, 0.3);
+  padding-block: 40px;
   border-top: 2px dotted rgba(128, 128, 128, 0.811);
 
   .wrapper_form-label {
@@ -61,13 +60,13 @@
   .gift-section {
     padding: 0;
     grid-column: 1 / -1;
+    padding-block: 20px;
 
     .wrapper_form-label {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 10px;
-      padding-block: 20px;
     }
 
     .giftTitle {

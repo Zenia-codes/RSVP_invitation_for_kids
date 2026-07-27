@@ -35,5 +35,11 @@ button {
 .submit {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 27px;
+}
+
+@media (min-width: 900px) {
+  .submit {
+    gap: 20px;
+  }
 }

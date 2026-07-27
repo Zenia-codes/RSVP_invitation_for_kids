@@ -113,6 +113,7 @@ span {
   @include g.rainbow-text;
   filter: drop-shadow(1px 2px 0px rgba(128, 128, 128, 0.7));
   z-index: 0;
+  -webkit-text-stroke: 0.05px #fff;
 }
 
 strong {
@@ -146,6 +147,6 @@ strong {
   .layout {
     grid-template-columns: 1fr 1fr;
     align-items: start;
-    gap: 20px;
+    gap: 3px;
   }
 }
