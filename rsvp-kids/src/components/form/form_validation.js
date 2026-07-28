@@ -50,12 +50,18 @@ form.addEventListener("submit", async function (e) {
   const surname = document.querySelector("#surname").value.trim();
   const email = document.querySelector("#email").value.trim();
   const agree = document.querySelector("#agree").checked;
+  const messageInput = document.querySelector("#message");
 
   const selectedRadio = document.querySelector(
     'input[name="attendance"]:checked'
   );
 
-  const adults = Number(document.querySelector("#numberOfAdults").value);
+  const adultZero = document.querySelector(".form_zero");
+  const adultsInput = document.querySelector("#numberOfAdults");
+  const kidsInput = document.querySelector("#numberOfKids");
+
+  const adults = Number(adultsInput.value);
+  const kids = Number(kidsInput.value);
 
   const [emailName, emailDomain] = email.split("@");
 
@@ -122,11 +128,47 @@ form.addEventListener("submit", async function (e) {
     return;
   }
 
-  if (adults === 0) {
-    errorMessage.dataset.i18n = "messages.validation.adults";
-    errorMessage.textContent = t("messages.validation.adults");
-    errorMessage.classList.remove("hidden");
-    return;
+  const isComing = selectedRadio.value === "yes";
+
+  // Kontrola počtu lidí pouze pokud přijdou
+  if (isComing) {
+    // počet dospělých není vyplněný
+    if (adultsInput.value === "") {
+      errorMessage.dataset.i18n = "messages.validation.adults";
+      errorMessage.textContent = t("messages.validation.adults");
+      errorMessage.classList.remove("hidden");
+      adultsInput.focus();
+      return;
+    }
+
+    // počet dětí není vyplněný
+    if (kidsInput.value === "") {
+      errorMessage.dataset.i18n = "messages.validation.kids";
+      errorMessage.textContent = t("messages.validation.kids");
+      errorMessage.classList.remove("hidden");
+      kidsInput.focus();
+      return;
+    }
+
+    // oba počty jsou 0
+    if (adults === 0 && kids === 0) {
+      errorMessage.dataset.i18n = "messages.validation.people";
+      errorMessage.textContent = t("messages.validation.people");
+      errorMessage.classList.remove("hidden");
+
+      adultsInput.focus();
+      return;
+    }
+
+    // dítě bez dospělého - vyžadujeme kontakt ve zprávě
+    if (kids > 0 && adults === 0 && messageInput.value.trim() === "") {
+      errorMessage.dataset.i18n = "messages.validation.contact";
+      errorMessage.textContent = t("messages.validation.contact");
+      errorMessage.classList.remove("hidden");
+
+      messageInput.focus();
+      return;
+    }
   }
 
   if (!agree) {

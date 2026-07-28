@@ -28,7 +28,7 @@
     "adults": "Dospělý",
     "children": "Dítě",
     "message": "Chceš něco vzkázat? Napiš to sem. 💌",
-    "textPlaceholder": "Např.: Přijdu později / Nemohu přijít, protože...",
+    "textPlaceholder": "Např.: Kontakt na dospělého / Přijdu později / Nemohu přijít, protože...",
     "agree": "* Souhlasím se zpracováním osobních údajů, které budou použity výhradně pro organizaci oslavy.",
     "buttonSubmit": "Odeslat",
     "giftIns": "Hledáš inspiraci na dárek?",
@@ -52,8 +52,11 @@
       "surnameIsWrong": "Příjmení obsahuje nepovolené znaky 🤔",
       "emailInvalid": "Prosím, vlož správnou e-mailovou adresu.",
       "emailMissingDot": "V e-mailu chybí tečka.",
-      "attendance": "Dej nám prosím vědět, jestli dorazíš ✨",
-      "adults": "Musí být alespoň 1 dospělý😊",
+      "attendance": "Dej nám prosím vědět, jestli dorazíš. ✨",
+      "adults": "Vyplň prosím pole - počet dospělých. 🙎‍♀️🙎‍♂️",
+      "kids": "Vyplň prosím pole - počet dětí. 👶",
+      "people": "Zadejte prosím počet dospělých nebo dětí. 👨‍👨‍👦‍👦",
+      "contact": "Pokud dítě přijde bez doprovodu, vyplňte prosím do zprávy ✉ telefonní kontakt. 📞",
       "consent": "Hups...Ještě zbývá zaškrtnout souhlas se zpracováním osobních dat."
     },
 
