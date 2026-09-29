@@ -4,7 +4,7 @@ An interactive web-based invitation designed as a simple and playful application
 
 The goal was to create a modern alternative to the classic paper invitation that would be not only visually appealing, but also practical and interactive. The primary focus was on ease of use on mobile devices, where guests are most likely to open the invitation and confirm their attendance.
 
-![RSVP Invitation preview](./assets/rsvp-preview.png)
+![RSVP Invitation preview](/rsvp-kids/src/assets/rsvp-preview.png)
 
 🔗 **Live demo:**
 https://zenia-codes.github.io/RSVP_invitation_for_kids/
@@ -62,5 +62,5 @@ Graphic Designer & Front-End Developer
 🌐 Portfolio:
 https://zenia-codes.github.io/web_SenseSpace/
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-connect-blue)] LinkedIn:
+🔗 LinkedIn:
 https://linkedin.com/in/zdeňka-beťáková-a7505b372/
